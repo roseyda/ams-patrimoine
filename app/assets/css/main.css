@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+/*
+ * AMS Patrimoine — Custom Theme
+ *
+ * Design language: calming, professional, warm
+ * Cloned from https://www.ams-patrimoine.fr
+ *
+ * Primary (navy):    deep navy blue family — headings, CTAs, dark sections
+ * Secondary (gold):  warm gold accent — highlights, secondary actions
+ * Neutral (sand):    warm beige/sand tones — replaces cool grays everywhere
+ */
+
+@theme static {
+  /* Font — clean professional sans-serif matching the site feel */
+  --font-sans: 'Source Sans 3', 'system-ui', sans-serif;
+
+  /* ─── Navy (primary) ─── */
+  /* Built around the brand navy #17324E */
+  --color-navy-50:  #f1f5fa;
+  --color-navy-100: #e0eaf4;
+  --color-navy-200: #c1d4e8;
+  --color-navy-300: #96b4d4;
+  --color-navy-400: #6590bb;
+  --color-navy-500: #4472a0;
+  --color-navy-600: #335a84;
+  --color-navy-700: #24456a;
+  --color-navy-800: #17324e;
+  --color-navy-900: #132a42;
+  --color-navy-950: #0b1a2d;
+
+  /* ─── Gold (secondary / accent) ─── */
+  /* Built around the site's CTA border gold #9B793E */
+  --color-gold-50:  #fef9f1;
+  --color-gold-100: #fbf0db;
+  --color-gold-200: #f5ddb3;
+  --color-gold-300: #eec482;
+  --color-gold-400: #e4a54e;
+  --color-gold-500: #d48c2c;
+  --color-gold-600: #b27322;
+  --color-gold-700: #8e5a1f;
+  --color-gold-800: #724920;
+  --color-gold-900: #5e3d1e;
+  --color-gold-950: #351f0d;
+
+  /* ─── Sand (neutral) ─── */
+  /* Warm beige family derived from #E6E0D4 and #D5CBB9 */
+  /* Light end: warm beige surfaces | Dark end: deep warm tones for dark UI */
+  --color-sand-50:  #faf8f5;
+  --color-sand-100: #f4f1eb;
+  --color-sand-200: #e7e1d6;
+  --color-sand-300: #d6ccba;
+  --color-sand-400: #c2b49d;
+  --color-sand-500: #a99a81;
+  --color-sand-600: #8a7a64;
+  --color-sand-700: #5c5043;
+  --color-sand-800: #302a24;
+  --color-sand-900: #1c1916;
+  --color-sand-950: #110f0d;
+}
+
+/* ─── LIGHT MODE ─── */
+:root {
+  --ui-radius: 0.375rem;
+  /* Deeper navy shade for bolder CTAs and primary accents */
+  --ui-primary: var(--ui-color-primary-700);
+}
+
+/* ─── DARK MODE ─── */
+.dark {
+  /* Lighter navy shade for legibility on dark backgrounds */
+  --ui-primary: var(--ui-color-primary-400);
+}

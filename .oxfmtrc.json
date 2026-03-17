@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 120,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "semi": true,
+  "bracketSpacing": true,
+  "vueIndentScriptAndStyle": true,
+  "ignorePatterns": [
+    "dist/**",
+    "node_modules/**",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    ".nuxt/**",
+    ".data/**",
+    ".output/**",
+    ".github/**"
+  ]
+}
