@@ -17,5 +17,16 @@
     ".data/**",
     ".output/**",
     ".github/**"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.vue"],
+      "options": {
+        "experimentalTailwindcss": {
+          "preserveWhitespace": false,
+          "preserveDuplicates": false
+        }
+      }
+    }
   ]
 }

@@ -18,7 +18,7 @@
 
   /* ─── Navy (primary) ─── */
   /* Built around the brand navy #17324E */
-  --color-navy-50:  #f1f5fa;
+  --color-navy-50: #f1f5fa;
   --color-navy-100: #e0eaf4;
   --color-navy-200: #c1d4e8;
   --color-navy-300: #96b4d4;
@@ -32,7 +32,7 @@
 
   /* ─── Gold (secondary / accent) ─── */
   /* Built around the site's CTA border gold #9B793E */
-  --color-gold-50:  #fef9f1;
+  --color-gold-50: #fef9f1;
   --color-gold-100: #fbf0db;
   --color-gold-200: #f5ddb3;
   --color-gold-300: #eec482;
@@ -47,7 +47,7 @@
   /* ─── Sand (neutral) ─── */
   /* Warm beige family derived from #E6E0D4 and #D5CBB9 */
   /* Light end: warm beige surfaces | Dark end: deep warm tones for dark UI */
-  --color-sand-50:  #faf8f5;
+  --color-sand-50: #faf8f5;
   --color-sand-100: #f4f1eb;
   --color-sand-200: #e7e1d6;
   --color-sand-300: #d6ccba;

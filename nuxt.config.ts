@@ -1,12 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/ui", "@nuxt/image", "@nuxt/fonts"],
+  modules: ['@nuxt/ui', '@nuxt/image', '@nuxt/fonts'],
   devtools: {
     enabled: true,
   },
-  css: ["~/assets/css/main.css"],
+  css: ['~/assets/css/main.css'],
   routeRules: {
-    "/": { prerender: true },
+    '/': { prerender: true },
   },
-  compatibilityDate: "2025-01-15",
+  compatibilityDate: '2025-01-15',
 });
