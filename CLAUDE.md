@@ -47,7 +47,7 @@ Always respect this order:
 
 ```vue
 <script setup lang="ts">
-  // logic
+// logic
 </script>
 
 <template>
@@ -55,7 +55,7 @@ Always respect this order:
 </template>
 
 <style scoped>
-  /* only if absolutely necessary */
+/* only if absolutely necessary */
 </style>
 ```
 
@@ -159,14 +159,16 @@ const props = defineProps<Props>();
 Example with useAsyncData:
 
 ```ts
-const { data, pending, error } = await useAsyncData<User>('user', () => $fetch('/api/user'));
+const { data, pending, error } = await useAsyncData<User>("user", () =>
+  $fetch("/api/user"),
+);
 ```
 
 Example with useFetch:
 
 ```ts
-const { data, pending, error } = await useFetch<User>('/api/user', {
-  key: 'user',
+const { data, pending, error } = await useFetch<User>("/api/user", {
+  key: "user",
 });
 ```
 
@@ -215,12 +217,10 @@ Before ANY commit:
 
 1. Run `pnpm lint`
 2. Run `pnpm typecheck`
+3. Run `pnpm fmt`
 
 If errors are found:
 → Fix them BEFORE committing
-
-Formatting:
-→ Run `pnpm fmt` if needed before final commit
 
 Never accumulate errors across steps.
 
