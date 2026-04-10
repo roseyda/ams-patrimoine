@@ -18,7 +18,7 @@
     }"
   >
     <template #left>
-      <NuxtLink to="/" class="shrink-0">
+      <NuxtLink to="/">
         <LayoutAppLogo />
       </NuxtLink>
     </template>

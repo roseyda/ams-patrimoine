@@ -110,50 +110,53 @@
     <section ref="gridRef" class="py-24" style="background-color: #f4f4ef">
       <div class="container mx-auto px-6 md:px-12">
         <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:gap-16">
-          <div
-            v-for="(card, i) in expertiseCards"
-            :key="card.title"
-            class="group relative overflow-hidden rounded-sm bg-white transition-all duration-700 ease-out hover:-translate-y-1 hover:shadow-2xl"
-            :class="gridVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
-            :style="{ transitionDelay: `${i * 150}ms` }"
+          <NuxtLink
+            v-for="({ category, ctaLabel, description, image, imageAlt, title, to }, i) in expertiseCards"
+            :to
+            :key="to"
           >
-            <!-- Card image -->
-            <div class="aspect-16/10 overflow-hidden">
-              <NuxtImg
-                :src="card.image"
-                :alt="card.imageAlt"
-                class="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
-                loading="lazy"
-              />
-            </div>
-
-            <!-- Card content -->
-            <div class="p-10">
-              <div class="mb-6 flex items-start justify-between">
-                <span class="font-sans text-xs font-semibold tracking-widest text-[#6d5d33] uppercase">
-                  {{ card.category }}
-                </span>
-                <UIcon
-                  name="i-lucide-arrow-right"
-                  class="text-[#6d5d33] transition-transform duration-300 group-hover:translate-x-2"
+            <div
+              class="group relative overflow-hidden rounded-sm bg-white transition-all duration-700 ease-out hover:-translate-y-1 hover:shadow-2xl"
+              :class="gridVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
+              :style="{ transitionDelay: `${i * 150}ms` }"
+            >
+              <!-- Card image -->
+              <div class="aspect-16/10 overflow-hidden">
+                <NuxtImg
+                  :src="image"
+                  :alt="imageAlt"
+                  class="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                  loading="lazy"
                 />
               </div>
-              <h2
-                class="mb-4 font-serif text-3xl text-[#000000] transition-colors duration-300 group-hover:text-[#6d5d33]"
-              >
-                {{ card.title }}
-              </h2>
-              <p class="mb-8 leading-relaxed text-[#45464e]">
-                {{ card.description }}
-              </p>
-              <NuxtLink
-                :to="card.to"
-                class="inline-flex items-center font-sans text-sm font-semibold tracking-widest text-[#081a3e] uppercase transition-colors duration-300 hover:text-[#6d5d33]"
-              >
-                {{ card.ctaLabel }}
-              </NuxtLink>
+
+              <!-- Card content -->
+              <div class="p-10">
+                <div class="mb-6 flex items-start justify-between">
+                  <span class="font-sans text-xs font-semibold tracking-widest text-[#6d5d33] uppercase">
+                    {{ category }}
+                  </span>
+                  <UIcon
+                    name="i-lucide-arrow-right"
+                    class="text-[#6d5d33] transition-transform duration-300 group-hover:translate-x-2"
+                  />
+                </div>
+                <h2
+                  class="mb-4 font-serif text-3xl text-[#000000] transition-colors duration-300 group-hover:text-[#6d5d33]"
+                >
+                  {{ title }}
+                </h2>
+                <p class="mb-8 leading-relaxed text-[#45464e]">
+                  {{ description }}
+                </p>
+                <p
+                  class="inline-flex items-center font-sans text-sm font-semibold tracking-widest text-[#081a3e] uppercase transition-colors duration-300 hover:text-[#6d5d33]"
+                >
+                  {{ ctaLabel }}
+                </p>
+              </div>
             </div>
-          </div>
+          </NuxtLink>
         </div>
       </div>
     </section>
