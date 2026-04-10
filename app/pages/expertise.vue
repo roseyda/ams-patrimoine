@@ -52,6 +52,29 @@
     },
   ];
 
+  // ── Animation helpers ────────────────────────────────────────────────
+  function useReveal(threshold = 0.12) {
+    const target = ref<HTMLElement | null>(null);
+    const visible = ref(false);
+    useIntersectionObserver(
+      target,
+      (entries: IntersectionObserverEntry[]) => {
+        if (entries[0]?.isIntersecting) visible.value = true;
+      },
+      { threshold, rootMargin: '0px 0px -40px 0px' }
+    );
+    return { target, visible };
+  }
+
+  // Hero: above fold — trigger after first paint
+  const heroReady = ref(false);
+
+  // Below-fold sections
+  const { target: gridRef, visible: gridVisible } = useReveal();
+  const { target: quoteRef, visible: quoteVisible } = useReveal();
+
+  onMounted(() => setTimeout(() => (heroReady.value = true), 80));
+
   useHead({
     title: 'Expertise — AMS Patrimoine',
     meta: [
@@ -69,18 +92,28 @@
     <!-- ─── Hero ─── -->
     <section class="container mx-auto px-6 pt-36 pb-20 md:px-12">
       <div class="max-w-3xl">
-        <span class="mb-4 block font-sans text-sm font-semibold tracking-[0.2em] text-[#6d5d33] uppercase">
+        <span
+          class="mb-4 block font-sans text-sm font-semibold tracking-[0.2em] text-[#6d5d33] uppercase transition-all duration-700 ease-out"
+          :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'"
+        >
           Domaines de Compétence
         </span>
+
         <h1
-          class="mb-8 font-serif text-5xl leading-tight font-bold text-[#000000] md:text-7xl"
-          style="letter-spacing: -0.02em"
+          class="mb-8 font-serif text-5xl leading-tight font-bold text-[#000000] transition-all duration-700 ease-out md:text-7xl"
+          style="letter-spacing: -0.02em; transition-delay: 150ms"
+          :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'"
         >
           Une expertise
           <span class="font-normal text-[#6d5d33] italic">multidimensionnelle</span>
           au service de votre avenir.
         </h1>
-        <p class="max-w-2xl text-xl leading-relaxed text-[#45464e]">
+
+        <p
+          class="max-w-2xl text-xl leading-relaxed text-[#45464e] transition-all duration-700 ease-out"
+          style="transition-delay: 300ms"
+          :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'"
+        >
           Nous structurons des solutions sur mesure alliant conseil juridique, ingénierie fiscale et stratégie
           d'investissement pour pérenniser votre patrimoine.
         </p>
@@ -88,13 +121,15 @@
     </section>
 
     <!-- ─── Expertise Grid ─── -->
-    <section class="py-24" style="background-color: #f4f4ef">
+    <section ref="gridRef" class="py-24" style="background-color: #f4f4ef">
       <div class="container mx-auto px-6 md:px-12">
         <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:gap-16">
           <div
-            v-for="card in expertiseCards"
+            v-for="(card, i) in expertiseCards"
             :key="card.title"
-            class="group relative overflow-hidden rounded-sm bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl"
+            class="group relative overflow-hidden rounded-sm bg-white transition-all duration-700 ease-out hover:-translate-y-1 hover:shadow-2xl"
+            :class="gridVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
+            :style="{ transitionDelay: `${i * 150}ms` }"
           >
             <!-- Card image -->
             <div class="aspect-16/10 overflow-hidden">
@@ -138,11 +173,14 @@
     </section>
 
     <!-- ─── Signature Quote Section ─── -->
-    <section class="py-32" style="background-color: #fafaf4">
+    <section ref="quoteRef" class="py-32" style="background-color: #fafaf4">
       <div class="container mx-auto px-6 md:px-12">
         <div class="relative grid grid-cols-1 items-center lg:grid-cols-12">
-          <!-- Image -->
-          <div class="lg:col-span-7">
+          <!-- Image: slides in from left -->
+          <div
+            class="transition-all duration-700 ease-out lg:col-span-7"
+            :class="quoteVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'"
+          >
             <NuxtImg
               src="/images/expertise/quote-portrait.jpg"
               alt="Expert AMS Patrimoine — soin du détail"
@@ -151,8 +189,12 @@
             />
           </div>
 
-          <!-- Quote card (overlapping) -->
-          <div class="z-10 mt-[-6rem] lg:col-span-6 lg:mt-0 lg:-ml-24">
+          <!-- Quote card: slides in from right, delayed -->
+          <div
+            class="z-10 mt-[-6rem] transition-all duration-700 ease-out lg:col-span-6 lg:mt-0 lg:-ml-24"
+            style="transition-delay: 200ms"
+            :class="quoteVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'"
+          >
             <div class="border-l-4 border-[#6d5d33] bg-white p-12 shadow-xl lg:p-20">
               <UIcon name="i-lucide-quote" class="mb-6 text-5xl text-[#6d5d33]" />
               <h3 class="mb-8 font-serif text-3xl leading-snug text-[#000000] italic">
