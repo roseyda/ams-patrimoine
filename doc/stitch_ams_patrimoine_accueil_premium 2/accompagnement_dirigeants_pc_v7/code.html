@@ -1,0 +1,355 @@
+<!doctype html>
+
+<html class="light" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'primary-container': '#081a3e',
+              'on-tertiary': '#ffffff',
+              'on-error': '#ffffff',
+              'primary-fixed': '#dae2ff',
+              'on-surface-variant': '#45464e',
+              'on-tertiary-fixed': '#001945',
+              'tertiary-fixed-dim': '#b0c6ff',
+              'surface-tint': '#4f5d86',
+              'inverse-primary': '#b7c5f4',
+              'tertiary-container': '#001945',
+              'tertiary-fixed': '#d9e2ff',
+              'inverse-surface': '#2f312e',
+              'surface-container-highest': '#e3e3de',
+              'surface-container-high': '#e8e8e3',
+              'secondary-fixed': '#f7e0ac',
+              'primary-fixed-dim': '#b7c5f4',
+              'error-container': '#ffdad6',
+              'on-tertiary-container': '#5c82d5',
+              surface: '#fafaf4',
+              'on-surface': '#1a1c19',
+              error: '#ba1a1a',
+              primary: '#000000',
+              outline: '#75777f',
+              'on-error-container': '#93000a',
+              'on-secondary-fixed': '#241a00',
+              background: '#fafaf4',
+              'on-primary-fixed-variant': '#37466c',
+              'inverse-on-surface': '#f1f1ec',
+              'on-primary-container': '#7483ad',
+              'surface-dim': '#dadad5',
+              'surface-container-lowest': '#ffffff',
+              'surface-container-low': '#f4f4ef',
+              'on-background': '#1a1c19',
+              'on-primary': '#ffffff',
+              'secondary-fixed-dim': '#dac492',
+              'secondary-container': '#f4dea9',
+              tertiary: '#000000',
+              'on-secondary-fixed-variant': '#54451e',
+              'on-secondary-container': '#716137',
+              'on-primary-fixed': '#081a3e',
+              'on-secondary': '#ffffff',
+              secondary: '#6d5d33',
+              'surface-container': '#eeeee9',
+              'outline-variant': '#c5c6cf',
+              'on-tertiary-fixed-variant': '#124393',
+              'surface-variant': '#e3e3de',
+              'surface-bright': '#fafaf4',
+            },
+            borderRadius: {
+              DEFAULT: '0.125rem',
+              lg: '0.25rem',
+              xl: '0.5rem',
+              full: '0.75rem',
+            },
+            fontFamily: {
+              headline: ['Noto Serif'],
+              body: ['Inter'],
+              label: ['Inter'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #fafaf4;
+        color: #1a1c19;
+      }
+      h1,
+      h2,
+      h3,
+      .serif {
+        font-family: 'Noto Serif', serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      .glass-panel {
+        background: rgba(250, 250, 244, 0.7);
+        backdrop-filter: blur(16px);
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 no-border bg-gradient-to-b from-[#f4f4ef] to-transparent">
+      <div
+        class="flex justify-between items-center px-12 py-6 max-w-screen-2xl mx-auto bg-[#fafaf4]/70 dark:bg-[#021338]/70 backdrop-blur-xl"
+      >
+        <div class="flex items-center gap-4">
+          <img
+            alt="AMS Patrimoine"
+            class="h-10 w-auto"
+            data-alt="Official logo of AMS Patrimoine in minimalist black font on a transparent background"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd9Db1lhggj89VZBXISDbtLNGj541gcLM3y-OKJTbeQDayinrmk_ABrMIpnpJ432gM6YUbCXyuX8o8Ny81BsCZxgJcOxCiMzi_aAHbxCOyc8jcgG4NplXSNNeZqXzrA-WbISMCXrqQac0Vm-PYWwCQd8_32v833BJqqDGWyz4YLiCdr2TMa3dSNbt18BmtifBoQTrikn_CIpkdPj5LymIOIGte8bDWevAlMXt-G1iOLYxGSMJFcTAa42_o4Zm3kBbWufE4PT7PrjN-"
+          />
+        </div>
+        <div class="hidden md:flex items-center space-x-10">
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#45464e] hover:text-[#081a3e] transition-colors duration-300"
+            href="#"
+            >Accueil</a
+          >
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#6d5d33] border-b-2 border-[#6d5d33] pb-1"
+            href="#"
+            >Expertise</a
+          >
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#45464e] hover:text-[#081a3e] transition-colors duration-300"
+            href="#"
+            >L'Approche</a
+          >
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#45464e] hover:text-[#081a3e] transition-colors duration-300"
+            href="#"
+            >Le Cabinet</a
+          >
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#45464e] hover:text-[#081a3e] transition-colors duration-300"
+            href="#"
+            >Contact</a
+          >
+        </div>
+        <button
+          class="bg-primary-container text-on-primary px-6 py-2.5 rounded-sm font-label text-xs uppercase tracking-widest hover:opacity-90 transition-opacity"
+        >
+          Espace Client
+        </button>
+      </div>
+    </nav>
+    <main class="pt-24">
+      <!-- Hero Section: The Architectural Blade Pattern -->
+      <section class="relative min-h-[921px] flex items-center overflow-hidden bg-surface">
+        <div class="absolute inset-0 z-0">
+          <img
+            class="w-full h-full object-cover grayscale opacity-40"
+            data-alt="Wide angle shot of modern glass corporate headquarters reflecting a dramatic sunset sky with deep blue and grey tones"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmNfhea9z7-KT87U9wBeuWiKIlnDshzfX-AgUKDXvO-JCXeK2vHVQuLk50mV3aR2au68t1Lwhrs48D538qgJLy9axJ1AIzqm6_B8Kbi5P3WUsljqZoFsHScUC-cv6E1H9RqtJg8HHuah_XIYLmiZYEY7HGufz0wItf-M_spX-oyaa1ihMAGwLkY1dU10kbH-OpmNPOYqeOKx7WZ2HkWpVha_tnQDawiovDDTMyuP1NyjxHcqWE-HtGOapuxQAIwhxo6cXxENGKSzCt"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-screen-2xl mx-auto px-12 grid grid-cols-12 gap-8 w-full">
+          <div class="col-span-12 lg:col-span-7">
+            <span class="inline-block font-label text-secondary text-sm font-semibold tracking-[0.2em] uppercase mb-6"
+              >Expertise Dédiée</span
+            >
+            <h1 class="text-primary text-6xl md:text-7xl font-bold tracking-tighter leading-[1.1] mb-8">
+              Accompagnement des <br />
+              <span class="italic text-secondary">Dirigeants</span> &amp; Entrepreneurs.
+            </h1>
+            <p class="text-on-surface-variant text-xl leading-relaxed max-w-xl font-light mb-12">
+              La gestion du patrimoine d’un dirigeant exige une vision transversale, réconciliant enjeux professionnels
+              et aspirations personnelles.
+            </p>
+            <div class="flex flex-wrap gap-6">
+              <button
+                class="bg-primary-container text-on-primary px-8 py-4 rounded-sm font-label text-sm uppercase tracking-widest hover:bg-on-primary-container transition-all"
+              >
+                Prendre Rendez-vous
+              </button>
+              <button
+                class="text-primary border-b border-primary/20 px-4 py-4 font-label text-sm uppercase tracking-widest hover:border-primary transition-all"
+              >
+                Consulter nos honoraires
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Asymmetric Blade Overlay -->
+        <div class="absolute bottom-0 right-0 w-1/3 h-2/3 hidden lg:block translate-y-12 translate-x-12">
+          <img
+            class="w-full h-full object-cover rounded-sm shadow-2xl"
+            data-alt="Minimalist high-end executive boardroom with dark wood table and floor-to-ceiling windows showing a blurred cityscape"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEHlIAYh_DOFNEEHKcdJsu4KX_iePqjNoL0tw6V6gqSo1-2rr66RxHZdgj3JgUAEK0qm5zNuIY0g8Pu3EH_pkZnqWV7I4z_dO4gkV8wurfQqRmU__yFB65KIEsAflfEW08LJG23K-fAjxzYSScQ9bbeqll2pkacnhGXoNyaIe_sx_XRo_khsbi7AiuWLxCUCnHxWRpamuxiwz9YGW-Sz3hI4WhxCVUEA82HSPaVfzAzBCOkt3s7GG7gK7w4eO1XV5MZ9UWJjLJEr0m"
+          />
+        </div>
+      </section>
+      <!-- Expertise Grid: Bento Style -->
+      <section class="py-32 px-12 max-w-screen-2xl mx-auto">
+        <div class="mb-20">
+          <h2 class="text-primary text-4xl font-bold mb-4">Une Approche Globale.</h2>
+          <div class="h-1 w-24 bg-secondary"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <!-- Large Feature -->
+          <div
+            class="md:col-span-8 bg-surface-container-low p-12 flex flex-col justify-between group cursor-pointer hover:bg-surface-container transition-colors duration-500"
+          >
+            <div>
+              <span class="material-symbols-outlined text-4xl text-secondary mb-8">account_balance</span>
+              <h3 class="text-3xl font-bold text-primary-container mb-6">Structuration du Patrimoine Professionnel</h3>
+              <p class="text-on-surface-variant text-lg leading-relaxed max-w-xl">
+                Arbitrage entre détention directe ou via holding, optimisation de la rémunération et protection sociale
+                du mandataire social.
+              </p>
+            </div>
+            <div
+              class="mt-12 flex items-center gap-4 text-secondary font-label text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              En savoir plus <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </div>
+          </div>
+          <!-- Small Feature -->
+          <div class="md:col-span-4 bg-primary-container p-12 text-on-primary flex flex-col justify-between">
+            <div>
+              <span class="material-symbols-outlined text-4xl text-on-primary-container mb-8">trending_down</span>
+              <h3 class="text-2xl font-bold mb-4">Optimisation Fiscale</h3>
+              <p class="text-on-primary-container leading-relaxed">
+                Mise en place de stratégies de capitalisation et de défiscalisation adaptées aux revenus exceptionnels.
+              </p>
+            </div>
+          </div>
+          <!-- Secondary Row -->
+          <div class="md:col-span-4 border border-outline-variant/20 p-12 flex flex-col justify-between">
+            <div>
+              <span class="material-symbols-outlined text-4xl text-secondary mb-8">exit_to_app</span>
+              <h3 class="text-2xl font-bold text-primary mb-4">Exit Strategy</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                Accompagnement dans la préparation de la cession d'entreprise : apport-cession (150-0 B ter) et
+                réinvestissement.
+              </p>
+            </div>
+          </div>
+          <div class="md:col-span-8 relative group overflow-hidden h-[400px]">
+            <img
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="Professional handshake between two executives in a modern office, representing a successful business transmission and trust"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjKMnEiau_Jg3hYviLubsp0WCxurLI9F-iRHV4Lfl32dtWavSW5a59SZ2kJFautTxMNDk8y6Axw8zutrVvxaErh4Bh2TNdAedQ03RjfLoq1YMqIIWrsCkMHg4KQVrCSt1rjZ2rYnPt2reG-GLehooq8zcPmH0eaNWyvpJVmAt9_DH4SUSPY61Kyc_moLwkJr_d77xHtSh10alMRk8DEX7IyWxmPLGIZb3qrWhjiY2G_j0zTxTm2WR_pYKPMScMnfRbbFLI1pJ5_m2t"
+            />
+            <div class="absolute inset-0 bg-primary-container/60 flex flex-col justify-end p-12">
+              <h3 class="text-3xl font-bold text-on-primary mb-2">Transmission</h3>
+              <p class="text-on-primary-container max-w-md">
+                Pacte Dutreil et donation-partage pour pérenniser l'outil de travail et protéger la génération suivante.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Stats Section (Surface Shift) -->
+      <section class="bg-surface-container-low py-24">
+        <div class="max-w-screen-2xl mx-auto px-12 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+          <div>
+            <div class="text-secondary text-5xl font-serif font-bold mb-4">15+</div>
+            <p class="text-on-surface-variant font-label text-xs uppercase tracking-widest">Années d'Expertise</p>
+          </div>
+          <div>
+            <div class="text-secondary text-5xl font-serif font-bold mb-4">250M€</div>
+            <p class="text-on-surface-variant font-label text-xs uppercase tracking-widest">Actifs sous Conseil</p>
+          </div>
+          <div>
+            <div class="text-secondary text-5xl font-serif font-bold mb-4">300+</div>
+            <p class="text-on-surface-variant font-label text-xs uppercase tracking-widest">Dirigeants Accompagnés</p>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section with Glassmorphism -->
+      <section class="py-32 px-12 relative overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+          <img
+            class="w-full h-full object-cover"
+            data-alt="Executive sitting in a leather chair looking out of a skyscraper window at night, soft ambient office lighting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwQ59LbAJ5OqXNwmkn1vSnd9cibm82OrgpFUOwCC2Zn7EKKXomsMAdVXmeR1kfl-VTj7SBTjW1yiBstX7YSgNw8uXNsghhofiEe9X4xDYDzF-LGHz4NF9aES3zhC1O0ZwwtoeVyqcoVWMxjygWd91CDOJ-JEbTqW3_f-6TJfNun5fDaVR8o2dtwVGuAWnTBPMYa56GEbLZTrz6JMNGHwmhWnXDgCzsjDTOvdVaBEc3Ow0frXUoN4J9cA-V2d0ZP6LJ1TEZlOshVB84"
+          />
+          <div class="absolute inset-0 bg-[#081a3e]/80"></div>
+        </div>
+        <div class="max-w-4xl mx-auto text-center glass-panel p-16 rounded-sm">
+          <h2 class="text-primary text-4xl font-bold mb-6">Prêt à sécuriser votre avenir professionnel ?</h2>
+          <p class="text-on-surface-variant text-lg mb-10 leading-relaxed">
+            Chaque parcours d'entrepreneur est unique. Rencontrons-nous pour une étude personnalisée de votre situation
+            patrimoniale et fiscale.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <button
+              class="bg-primary-container text-on-primary px-10 py-5 rounded-sm font-label text-sm uppercase tracking-widest hover:bg-black transition-all"
+            >
+              Prendre Contact
+            </button>
+            <button
+              class="bg-white/50 backdrop-blur text-primary px-10 py-5 rounded-sm font-label text-sm uppercase tracking-widest border border-primary/10 hover:bg-white/80 transition-all"
+            >
+              Notre Guide Dirigeant
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full border-t border-[#081a3e]/10 bg-[#f4f4ef] dark:bg-[#021338]">
+      <div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full max-w-screen-2xl mx-auto">
+        <div class="mb-8 md:mb-0">
+          <span class="font-serif text-xl font-semibold text-[#081a3e] dark:text-[#fafaf4]">AMS Patrimoine</span>
+          <p class="mt-2 text-[#45464e] dark:text-slate-400 font-sans text-[10px] tracking-widest uppercase">
+            Gestion Privée &amp; Stratégie Fiscale
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+          <a
+            class="font-sans text-sm tracking-wide uppercase text-[#45464e] hover:text-[#6d5d33] transition-colors duration-200"
+            href="#"
+            >Mentions Légales</a
+          >
+          <a
+            class="font-sans text-sm tracking-wide uppercase text-[#45464e] hover:text-[#6d5d33] transition-colors duration-200"
+            href="#"
+            >Politique de Confidentialité</a
+          >
+          <a
+            class="font-sans text-sm tracking-wide uppercase text-[#45464e] hover:text-[#6d5d33] transition-colors duration-200"
+            href="#"
+            >Honoraires</a
+          >
+          <a
+            class="font-sans text-sm tracking-wide uppercase text-[#45464e] hover:text-[#6d5d33] transition-colors duration-200"
+            href="#"
+            >Gestion des Cookies</a
+          >
+        </div>
+        <div class="text-[#45464e] dark:text-slate-400 font-sans text-xs tracking-wide">
+          © 2024 AMS Patrimoine. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

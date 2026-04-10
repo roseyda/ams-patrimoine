@@ -1,0 +1,346 @@
+<!doctype html>
+
+<html class="light" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Stratégie Financière - AMS Patrimoine</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'primary-container': '#081a3e',
+              'on-tertiary': '#ffffff',
+              'on-error': '#ffffff',
+              'primary-fixed': '#dae2ff',
+              'on-surface-variant': '#45464e',
+              'on-tertiary-fixed': '#001945',
+              'tertiary-fixed-dim': '#b0c6ff',
+              'surface-tint': '#4f5d86',
+              'inverse-primary': '#b7c5f4',
+              'tertiary-container': '#001945',
+              'tertiary-fixed': '#d9e2ff',
+              'inverse-surface': '#2f312e',
+              'surface-container-highest': '#e3e3de',
+              'surface-container-high': '#e8e8e3',
+              'secondary-fixed': '#f7e0ac',
+              'primary-fixed-dim': '#b7c5f4',
+              'error-container': '#ffdad6',
+              'on-tertiary-container': '#5c82d5',
+              surface: '#fafaf4',
+              'on-surface': '#1a1c19',
+              error: '#ba1a1a',
+              primary: '#000000',
+              outline: '#75777f',
+              'on-error-container': '#93000a',
+              'on-secondary-fixed': '#241a00',
+              background: '#fafaf4',
+              'on-primary-fixed-variant': '#37466c',
+              'inverse-on-surface': '#f1f1ec',
+              'on-primary-container': '#7483ad',
+              'surface-dim': '#dadad5',
+              'surface-container-lowest': '#ffffff',
+              'surface-container-low': '#f4f4ef',
+              'on-background': '#1a1c19',
+              'on-primary': '#ffffff',
+              'secondary-fixed-dim': '#dac492',
+              'secondary-container': '#f4dea9',
+              tertiary: '#000000',
+              'on-secondary-fixed-variant': '#54451e',
+              'on-secondary-container': '#716137',
+              'on-primary-fixed': '#081a3e',
+              'on-secondary': '#ffffff',
+              secondary: '#6d5d33',
+              'surface-container': '#eeeee9',
+              'outline-variant': '#c5c6cf',
+              'on-tertiary-fixed-variant': '#124393',
+              'surface-variant': '#e3e3de',
+              'surface-bright': '#fafaf4',
+            },
+            borderRadius: {
+              DEFAULT: '0.125rem',
+              lg: '0.25rem',
+              xl: '0.5rem',
+              full: '0.75rem',
+            },
+            fontFamily: {
+              headline: ['Noto Serif'],
+              body: ['Inter'],
+              label: ['Inter'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      .text-editorial {
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+      }
+      .glass-header {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .ledger-line {
+        border-bottom: 1px solid rgba(197, 198, 207, 0.2);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface font-body text-on-surface-variant selection:bg-secondary-fixed selection:text-on-secondary-fixed"
+  >
+    <!-- Header / TopNavBar -->
+    <header
+      class="fixed top-0 w-full z-50 bg-[#fafaf4]/70 dark:bg-[#021338]/70 backdrop-blur-xl no-border bg-gradient-to-b from-[#f4f4ef] to-transparent"
+    >
+      <div class="flex justify-between items-center px-12 py-6 max-w-screen-2xl mx-auto">
+        <div class="flex items-center gap-4">
+          <img
+            alt="AMS Patrimoine"
+            class="h-10 w-auto"
+            data-alt="minimalist professional logo for AMS Patrimoine in black on a transparent background"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa5lCiRE2D9alwdIx1fSqpbNAVvSuROS_bgQKz6UTZMkFCLw2Rm74yIVorIt2xblss4IW-l9LG9Wz40u3uDkHrQ2byKvLLQcmkJ6wVn_dTYtYkotmu6Ve4p9orQWMd1qjekthIHPPhSf1mkPjbGiycuaG-L8EKTogWTDWUwmokLsq20eNJ2ki-C7nm9Yl-CaNmc968aATCsbBjHmXnsrZA4B32lzvZZA2bwWqVc0Ppr6C8HFBRhsjdgQZYLwMGyt4nHZ0Y-PKzSiOD"
+          />
+        </div>
+        <nav class="hidden md:flex items-center gap-10">
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#45464e] hover:text-[#081a3e] transition-colors duration-300"
+            href="#"
+            >Accueil</a
+          >
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#6d5d33] border-b-2 border-[#6d5d33] pb-1"
+            href="#"
+            >Expertise</a
+          >
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#45464e] hover:text-[#081a3e] transition-colors duration-300"
+            href="#"
+            >L'Approche</a
+          >
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#45464e] hover:text-[#081a3e] transition-colors duration-300"
+            href="#"
+            >Le Cabinet</a
+          >
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#45464e] hover:text-[#081a3e] transition-colors duration-300"
+            href="#"
+            >Contact</a
+          >
+        </nav>
+        <button
+          class="bg-primary-container text-on-primary px-6 py-2 text-sm font-semibold tracking-wide uppercase rounded-sm hover:opacity-90 transition-opacity"
+        >
+          Mon Compte
+        </button>
+      </div>
+    </header>
+    <main class="pt-32">
+      <!-- Hero Section -->
+      <section class="px-12 mb-24 max-w-screen-2xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
+          <div class="md:col-span-7">
+            <h1 class="font-headline text-7xl font-bold text-editorial text-primary mb-8">
+              L'Indépendance au service de la <span class="text-secondary">Performance</span>.
+            </h1>
+            <p class="font-body text-xl text-on-surface-variant max-w-xl leading-relaxed">
+              Notre architecture ouverte garantit une neutralité absolue dans la sélection de vos actifs. Nous
+              transformons la complexité des marchés en stratégies de croissance pérennes.
+            </p>
+          </div>
+          <div class="md:col-span-5 flex flex-col gap-6 border-l border-outline-variant/20 pl-8">
+            <div class="text-xs font-label uppercase tracking-widest text-secondary font-bold">Market Insight</div>
+            <div class="flex items-center gap-4">
+              <span class="font-headline text-5xl font-light text-primary">0%</span>
+              <p class="text-sm font-label text-on-surface-variant">
+                Conflit d'intérêts grâce à une structure de rémunération transparente et indépendante.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Asymmetric Blade Section: The Strategy -->
+      <section class="relative mb-32">
+        <div class="w-full h-[600px] overflow-hidden">
+          <img
+            class="w-full h-full object-cover"
+            data-alt="abstract wide shot of a modern minimalist architectural atrium with strong geometric shadows and natural light filtered through glass panels"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuADkzXlKLXrGl9zpSAjoLiCaz_jcY561D_J7hpKWLh801Ppz6i-HZ2TRgzPLkOYNj1GYDGaIexorYmFzrVjWD2VlZB816PWfch9HOrTyYWhFpyv9BCOXGUWKcXHvGh2EAsXvtmnC979Ncsz0RleU7atOZYsHlqWhohw3crLAvFJ0OnFqoNJDNuYM69WOQdBErkVMUSj9z4S8XODE_q4DjTiyd1DvO7NXp7Z4rzY2O46XvM2clHkdHo-sjNyuX9iMDcNGJq7DMJbqUXP"
+          />
+        </div>
+        <!-- Overlapping Card "The Architectural Blade" -->
+        <div
+          class="absolute -bottom-16 left-12 md:left-24 bg-surface-container-lowest p-12 max-w-2xl shadow-2xl shadow-primary-container/5 rounded-sm"
+        >
+          <h2 class="font-headline text-4xl font-bold text-primary mb-6">Architecture Ouverte</h2>
+          <p class="font-body text-on-surface-variant mb-8 leading-relaxed">
+            À la différence des banques de réseau, AMS Patrimoine accède à l'intégralité des solutions du marché
+            mondial. Cette liberté nous permet de construire des portefeuilles sur-mesure, sans biais institutionnel.
+          </p>
+          <div class="grid grid-cols-2 gap-8">
+            <div>
+              <span class="block font-headline text-2xl font-bold text-secondary mb-1">Expertise multi-classe</span>
+              <p class="text-xs font-label uppercase tracking-wider">Actions, Obligations, Private Equity</p>
+            </div>
+            <div>
+              <span class="block font-headline text-2xl font-bold text-secondary mb-1">Sourcing Mondial</span>
+              <p class="text-xs font-label uppercase tracking-wider">Gestionnaires de conviction</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Performance & Quantitative Visualization -->
+      <section class="px-12 py-32 bg-surface-container-low">
+        <div class="max-w-screen-2xl mx-auto">
+          <div class="flex flex-col md:flex-row justify-between items-start mb-20 gap-12">
+            <div class="max-w-xl">
+              <h2 class="font-headline text-5xl font-bold text-primary mb-6">Gestion d'Actifs &amp; Pilotage</h2>
+              <p class="text-lg">
+                Nous appliquons une rigueur quantitative alliée à une analyse macroéconomique fine pour optimiser le
+                couple rendement/risque de votre patrimoine.
+              </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-surface p-6 rounded-sm ledger-line">
+                <span class="material-symbols-outlined text-secondary block mb-4" data-icon="monitoring"
+                  >monitoring</span
+                >
+                <div class="text-2xl font-headline font-bold text-primary">Analyse Risque</div>
+                <p class="text-xs text-on-surface-variant uppercase mt-2">Stress-tests continus</p>
+              </div>
+              <div class="bg-surface p-6 rounded-sm ledger-line">
+                <span class="material-symbols-outlined text-secondary block mb-4" data-icon="account_balance"
+                  >account_balance</span
+                >
+                <div class="text-2xl font-headline font-bold text-primary">Reporting</div>
+                <p class="text-xs text-on-surface-variant uppercase mt-2">Transparence totale</p>
+              </div>
+            </div>
+          </div>
+          <!-- Bento Grid Visualization -->
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div
+              class="md:col-span-2 bg-primary-container p-10 text-on-primary rounded-sm flex flex-col justify-between aspect-video md:aspect-auto"
+            >
+              <div>
+                <h3 class="font-headline text-3xl font-medium mb-4">Stratégie Private Equity</h3>
+                <p class="opacity-80">
+                  Accédez aux entreprises non cotées pour une croissance décorrélée des marchés boursiers traditionnels.
+                </p>
+              </div>
+              <div class="flex items-end justify-between">
+                <div class="text-5xl font-headline font-bold text-secondary-fixed">8-12%</div>
+                <div class="text-xs uppercase tracking-widest opacity-60">Objectif cible long terme</div>
+              </div>
+            </div>
+            <div class="md:col-span-1 bg-surface-container-lowest p-8 rounded-sm">
+              <h3 class="font-headline text-xl font-bold mb-4">Gestion Sous Mandat</h3>
+              <p class="text-sm mb-6">
+                Déléguez le quotidien de vos investissements à nos experts pour une réactivité maximale.
+              </p>
+              <div class="h-24 w-full flex items-end gap-1">
+                <div class="flex-1 bg-secondary/20 h-1/2"></div>
+                <div class="flex-1 bg-secondary/40 h-2/3"></div>
+                <div class="flex-1 bg-secondary/60 h-3/4"></div>
+                <div class="flex-1 bg-secondary h-full"></div>
+              </div>
+            </div>
+            <div class="md:col-span-1 bg-surface-container-lowest p-8 rounded-sm">
+              <h3 class="font-headline text-xl font-bold mb-4">Conseil en Investissement</h3>
+              <p class="text-sm mb-6">
+                Gardez le contrôle tout en bénéficiant de nos analyses et recommandations tactiques.
+              </p>
+              <div class="flex items-center gap-2 text-secondary">
+                <span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+                <span class="text-xs font-label font-bold uppercase">Agrément CIF</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section with Glassmorphism -->
+      <section class="px-12 py-24 max-w-screen-2xl mx-auto">
+        <div
+          class="relative overflow-hidden bg-primary-container rounded-sm p-16 flex flex-col md:flex-row items-center justify-between"
+        >
+          <div class="absolute inset-0 opacity-20">
+            <img
+              class="w-full h-full object-cover"
+              data-alt="close-up of elegant gold pen resting on financial ledger paper with soft bokeh of a professional office"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc7jss3a9Ng7IWkpSciaVNLO0GbXeGmE2_DaJYIvQsg8U_VpFDRRNkHAf5cZ3kqnohXXN7wVFPw_3XN8ZehL0SRyLnq0i8F1uDCQwz1-f57UAcolwUFjU8ubawvy1Ndq87SFwwdhCu1cjU87I25n054t2eX2wRMMeEgF_0rFMfDOuwgHepl_Xj96nmKJoUWQsi--TfDbOJAv8lUr5EIEx4ae3VYiYntZK4okf1XRsvKGOlcQTbri1BtgB7Q4FA_4RQruwm2w7UCrF1"
+            />
+          </div>
+          <div class="relative z-10 max-w-2xl text-center md:text-left mb-10 md:mb-0">
+            <h2 class="font-headline text-5xl font-bold text-on-primary mb-6">Prêt à optimiser votre capital ?</h2>
+            <p class="text-on-primary-container text-xl">
+              Rencontrez nos experts pour un audit financier complet de votre situation actuelle.
+            </p>
+          </div>
+          <div class="relative z-10">
+            <button
+              class="bg-secondary text-on-secondary px-10 py-5 font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-secondary/90 transition-all shadow-xl"
+            >
+              Demander un Audit
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full border-t border-[#081a3e]/10 bg-[#f4f4ef] dark:bg-[#021338]">
+      <div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full max-w-screen-2xl mx-auto">
+        <div class="mb-6 md:mb-0">
+          <span class="font-serif text-xl font-semibold text-[#081a3e] dark:text-[#fafaf4]">AMS Patrimoine</span>
+          <p class="font-sans text-sm tracking-wide uppercase mt-2 text-[#45464e] dark:text-slate-400">
+            © 2024 AMS Patrimoine. Tous droits réservés.
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-8">
+          <a
+            class="font-sans text-sm tracking-wide uppercase text-[#45464e] hover:text-[#6d5d33] transition-colors duration-200"
+            href="#"
+            >Mentions Légales</a
+          >
+          <a
+            class="font-sans text-sm tracking-wide uppercase text-[#45464e] hover:text-[#6d5d33] transition-colors duration-200"
+            href="#"
+            >Politique de Confidentialité</a
+          >
+          <a
+            class="font-sans text-sm tracking-wide uppercase text-[#45464e] hover:text-[#6d5d33] transition-colors duration-200"
+            href="#"
+            >Honoraires</a
+          >
+          <a
+            class="font-sans text-sm tracking-wide uppercase text-[#45464e] hover:text-[#6d5d33] transition-colors duration-200"
+            href="#"
+            >Gestion des Cookies</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

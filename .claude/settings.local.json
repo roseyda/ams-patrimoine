@@ -21,7 +21,9 @@
       "Bash(curl:*)",
       "Bash(grep -r \"center\" node_modules/@nuxt/ui/dist/runtime/components/layout/Header*)",
       "Bash(git add:*)",
-      "Bash(git commit -m ':*)"
+      "Bash(git commit -m ':*)",
+      "Bash(pnpm fmt:*)",
+      "Bash(wait)"
     ]
   }
 }

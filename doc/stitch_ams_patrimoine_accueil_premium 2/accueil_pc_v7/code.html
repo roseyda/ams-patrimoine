@@ -1,0 +1,455 @@
+<!doctype html>
+
+<html class="light" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AMS Patrimoine | Gestion de Fortune &amp; Conseil en Investissement</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'primary-container': '#081a3e',
+              'on-tertiary': '#ffffff',
+              'on-error': '#ffffff',
+              'primary-fixed': '#dae2ff',
+              'on-surface-variant': '#45464e',
+              'on-tertiary-fixed': '#001945',
+              'tertiary-fixed-dim': '#b0c6ff',
+              'surface-tint': '#4f5d86',
+              'inverse-primary': '#b7c5f4',
+              'tertiary-container': '#001945',
+              'tertiary-fixed': '#d9e2ff',
+              'inverse-surface': '#2f312e',
+              'surface-container-highest': '#e3e3de',
+              'surface-container-high': '#e8e8e3',
+              'secondary-fixed': '#f7e0ac',
+              'primary-fixed-dim': '#b7c5f4',
+              'error-container': '#ffdad6',
+              'on-tertiary-container': '#5c82d5',
+              surface: '#fafaf4',
+              'on-surface': '#1a1c19',
+              error: '#ba1a1a',
+              primary: '#000000',
+              outline: '#75777f',
+              'on-error-container': '#93000a',
+              'on-secondary-fixed': '#241a00',
+              background: '#fafaf4',
+              'on-primary-fixed-variant': '#37466c',
+              'inverse-on-surface': '#f1f1ec',
+              'on-primary-container': '#7483ad',
+              'surface-dim': '#dadad5',
+              'surface-container-lowest': '#ffffff',
+              'surface-container-low': '#f4f4ef',
+              'on-background': '#1a1c19',
+              'on-primary': '#ffffff',
+              'secondary-fixed-dim': '#dac492',
+              'secondary-container': '#f4dea9',
+              tertiary: '#000000',
+              'on-secondary-fixed-variant': '#54451e',
+              'on-secondary-container': '#716137',
+              'on-primary-fixed': '#081a3e',
+              'on-secondary': '#ffffff',
+              secondary: '#6d5d33',
+              'surface-container': '#eeeee9',
+              'outline-variant': '#c5c6cf',
+              'on-tertiary-fixed-variant': '#124393',
+              'surface-variant': '#e3e3de',
+              'surface-bright': '#fafaf4',
+            },
+            borderRadius: {
+              DEFAULT: '0.125rem',
+              lg: '0.25rem',
+              xl: '0.5rem',
+              full: '0.75rem',
+            },
+            fontFamily: {
+              headline: ['Noto Serif'],
+              body: ['Inter'],
+              label: ['Inter'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      .serif-heading {
+        font-family: 'Noto Serif', serif;
+      }
+      .glass-header {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface selection:bg-secondary/30">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 bg-[#fafaf4]/70 dark:bg-[#021338]/70 backdrop-blur-xl">
+      <nav class="flex justify-between items-center px-12 py-6 max-w-screen-2xl mx-auto">
+        <div class="flex items-center">
+          <img
+            alt="AMS Patrimoine Logo"
+            class="h-10 object-contain"
+            data-alt="high-resolution luxury logo for AMS Patrimoine with elegant black typography and refined architectural lines"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDBMu9UpaTomQ9QxFx8vzeuwGel0vjr_eUSrfesc3wupYYhEuPzwRak8V_A6_KgEN-LG_wqXkQPhznvTm0SLV1uIPD7xUkPjNmw7_R35FWW6HPxDvbnCMxQoiR1ALHtMh2ntLjffdG8mdyboRzow-NHSDoHe2AqjB27Fp6IBJrANugLwlGl-Emm9cIW0FdwoUTEKZ3Y6jHP9tEvZ2P_80Vz66URZa0cEVvSV7S7FC9JhwdJN25oL8uJwCfdatZwQsjtdLNrt-R4AFH"
+          />
+        </div>
+        <div class="hidden md:flex items-center space-x-12">
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#6d5d33] border-b-2 border-[#6d5d33] pb-1"
+            href="#"
+            >Accueil</a
+          >
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#45464e] hover:text-[#081a3e] transition-colors duration-300"
+            href="#"
+            >Expertise</a
+          >
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#45464e] hover:text-[#081a3e] transition-colors duration-300"
+            href="#"
+            >L'Approche</a
+          >
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#45464e] hover:text-[#081a3e] transition-colors duration-300"
+            href="#"
+            >Le Cabinet</a
+          >
+          <a
+            class="font-serif text-lg tracking-tight font-medium text-[#45464e] hover:text-[#081a3e] transition-colors duration-300"
+            href="#"
+            >Contact</a
+          >
+        </div>
+        <div class="md:hidden">
+          <span class="material-symbols-outlined text-primary-container text-3xl">menu</span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section: The Architectural Blade Pattern -->
+      <section class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-surface">
+        <div class="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-0 items-stretch h-full">
+          <!-- Text Content -->
+          <div class="md:col-span-7 flex flex-col justify-center z-10 py-20 pr-0 md:pr-12">
+            <span class="text-secondary font-label uppercase tracking-widest text-sm mb-6 block font-semibold"
+              >Cabinet de Conseil en Gestion de Patrimoine</span
+            >
+            <h1 class="text-5xl md:text-7xl lg:text-8xl text-primary-container leading-tight mb-8 tracking-tighter">
+              L'art de <br />
+              <span class="italic font-normal">préserver</span> <br />
+              votre héritage.
+            </h1>
+            <p class="text-on-surface-variant text-lg md:text-xl max-w-xl leading-relaxed mb-12">
+              AMS Patrimoine accompagne les familles et les chefs d'entreprise dans la structuration, l'optimisation et
+              la transmission de leur patrimoine avec une vision long terme.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6">
+              <button
+                class="bg-primary-container text-on-primary px-10 py-5 rounded-sm font-label font-medium tracking-wide hover:bg-[#0c2559] transition-all duration-300"
+              >
+                Découvrir notre expertise
+              </button>
+              <button
+                class="text-secondary border-b border-secondary/30 px-4 py-5 font-label font-medium tracking-wide hover:border-secondary transition-all duration-300 inline-flex items-center gap-2"
+              >
+                Prendre rendez-vous <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+          <!-- Hero Image: Marie-Sophie LECLUYSE -->
+          <div class="md:col-span-5 relative min-h-[500px] md:min-h-0">
+            <div class="absolute inset-0 bg-surface-container-low z-0 translate-x-12 translate-y-12"></div>
+            <div class="relative h-full w-full overflow-hidden shadow-2xl z-10">
+              <img
+                alt="Marie-Sophie LECLUYSE - Fondatrice AMS Patrimoine"
+                class="absolute inset-0 w-full h-full object-cover grayscale-[20%]"
+                data-alt="professional portrait of Marie-Sophie Lecluyse, founder of AMS Patrimoine, soft natural lighting, professional and elegant business setting background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0YzQ49KlwYYgC0BP7l8MWxIvy98-kRYzVNS7Mt2rPXoTMkyNWXF6fylC4exMEt9XimQq0ADCdWkArIM2br9F4AM1ZhH41fXXT5UhxLuCVwUaSu2gQ1S5OXhNSXscfjcIINI9UqT_KSRAzUkZH4pl6HisAZJe55SIDPQhwJxo1ZPUBBmn5yGUPz3dGg8cvqtAr1ihujl-DO3UGgsftZwYlUReNKzGfDs_hM2V_Wnplts8QHTHxldUfe54iSzRJ7oWnnvP1DFBFYyPh"
+              />
+            </div>
+            <!-- Overlapping Label -->
+            <div
+              class="absolute bottom-10 -left-20 bg-surface-container-lowest p-8 shadow-xl z-20 max-w-xs border-l-4 border-secondary"
+            >
+              <p class="text-primary-container font-headline text-xl leading-snug">
+                "Chaque patrimoine raconte une histoire unique qui mérite une stratégie sur-mesure."
+              </p>
+              <p class="mt-4 text-secondary font-label text-xs uppercase tracking-widest font-bold">
+                Marie-Sophie LECLUYSE
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Expertise Section: Tonal Grid -->
+      <section class="py-32 bg-surface-container-low">
+        <div class="container mx-auto px-6 md:px-12">
+          <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+            <div class="max-w-2xl">
+              <h2 class="text-4xl md:text-5xl text-primary-container mb-6">Expertise 360°</h2>
+              <p class="text-on-surface-variant text-lg">
+                Une approche globale de votre situation patrimoniale combinant vision juridique, fiscale et financière.
+              </p>
+            </div>
+            <div class="hidden md:block">
+              <span class="text-primary-container/20 text-8xl font-serif">01</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Card 1 -->
+            <div class="group">
+              <div
+                class="bg-surface-container-lowest p-10 h-full flex flex-col transition-transform duration-500 hover:-translate-y-2"
+              >
+                <span class="material-symbols-outlined text-secondary text-4xl mb-8" data-icon="account_balance"
+                  >account_balance</span
+                >
+                <h3 class="text-2xl text-primary-container mb-4">Ingénierie Patrimoniale</h3>
+                <p class="text-on-surface-variant leading-relaxed flex-grow">
+                  Analyse structurelle de vos actifs, optimisation de la détention et anticipation de la transmission.
+                </p>
+                <div
+                  class="mt-8 pt-8 border-t border-outline-variant/20 group-hover:border-secondary/50 transition-colors"
+                >
+                  <a
+                    class="text-secondary text-sm font-semibold tracking-widest uppercase inline-flex items-center gap-2"
+                    href="#"
+                    >En savoir plus <span class="material-symbols-outlined text-xs">chevron_right</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="group">
+              <div
+                class="bg-surface-container-lowest p-10 h-full flex flex-col transition-transform duration-500 hover:-translate-y-2"
+              >
+                <span class="material-symbols-outlined text-secondary text-4xl mb-8" data-icon="insights"
+                  >insights</span
+                >
+                <h3 class="text-2xl text-primary-container mb-4">Conseil en Investissement</h3>
+                <p class="text-on-surface-variant leading-relaxed flex-grow">
+                  Sélection rigoureuse de supports financiers et immobiliers adaptés à votre profil de risque et vos
+                  objectifs.
+                </p>
+                <div
+                  class="mt-8 pt-8 border-t border-outline-variant/20 group-hover:border-secondary/50 transition-colors"
+                >
+                  <a
+                    class="text-secondary text-sm font-semibold tracking-widest uppercase inline-flex items-center gap-2"
+                    href="#"
+                    >En savoir plus <span class="material-symbols-outlined text-xs">chevron_right</span></a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="group">
+              <div
+                class="bg-surface-container-lowest p-10 h-full flex flex-col transition-transform duration-500 hover:-translate-y-2"
+              >
+                <span class="material-symbols-outlined text-secondary text-4xl mb-8" data-icon="foundation"
+                  >foundation</span
+                >
+                <h3 class="text-2xl text-primary-container mb-4">Accompagnement Dirigeant</h3>
+                <p class="text-on-surface-variant leading-relaxed flex-grow">
+                  Stratégie de rémunération, optimisation de la trésorerie d'entreprise et préparation de la cession.
+                </p>
+                <div
+                  class="mt-8 pt-8 border-t border-outline-variant/20 group-hover:border-secondary/50 transition-colors"
+                >
+                  <a
+                    class="text-secondary text-sm font-semibold tracking-widest uppercase inline-flex items-center gap-2"
+                    href="#"
+                    >En savoir plus <span class="material-symbols-outlined text-xs">chevron_right</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- DNA Section: The Ledger Look -->
+      <section class="py-32 bg-surface">
+        <div class="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div class="order-2 lg:order-1 relative">
+            <div class="aspect-square bg-surface-container-low overflow-hidden">
+              <img
+                alt="Bureau AMS Patrimoine"
+                class="w-full h-full object-cover mix-blend-multiply opacity-80"
+                data-alt="minimalist architectural luxury office interior with marble surfaces and refined lighting, elegant and quiet professional environment"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgk02VPwy-vKt57w_NutwTTUKGQI_IERBiz_hgZAudsBqC_qh5aWRTliBMSueBLCGBDNeH4sgTIOoAPoCFmNqZA3UKybnGSQ4azkmbDuZZs2kHr-W66Ha2SgqAEBga96rwZLb5qdVzZhyzIKDYgzzpdd_5tDkpS17LTQ_1xjGOc2MHnXmPDU-KiXPOcLQgJh9fGAsxZaKR7Ayqn_HGb7yXyM76P6nkzjUZYEOm0g-H4IHouWcensciSDbZeZ59Llu5T1FM0ATYCLgD"
+              />
+            </div>
+            <div class="absolute -bottom-10 -right-10 bg-primary-container text-on-primary p-12 hidden md:block">
+              <div class="text-4xl font-headline mb-2 italic">15+</div>
+              <div class="text-xs uppercase tracking-[0.2em] opacity-70">Années d'Expertise</div>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2">
+            <span class="text-secondary font-label uppercase tracking-widest text-sm mb-6 block font-semibold"
+              >L'ADN du Cabinet</span
+            >
+            <h2 class="text-4xl md:text-5xl text-primary-container mb-10 leading-tight">
+              Une approche résolument <span class="italic">indépendante</span> et confidentielle.
+            </h2>
+            <div class="space-y-12">
+              <div class="flex gap-6">
+                <span class="text-secondary text-2xl font-serif">I.</span>
+                <div>
+                  <h4 class="text-xl font-headline text-primary-container mb-3">Indépendance Totale</h4>
+                  <p class="text-on-surface-variant">
+                    Absence de lien capitalistique avec les établissements financiers, garantissant une objectivité
+                    absolue dans nos préconisations.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <span class="text-secondary text-2xl font-serif">II.</span>
+                <div>
+                  <h4 class="text-xl font-headline text-primary-container mb-3">Sur-mesure Architectural</h4>
+                  <p class="text-on-surface-variant">
+                    Chaque stratégie est construite comme une pièce d'architecture unique, adaptée aux fondations de
+                    votre histoire familiale.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <span class="text-secondary text-2xl font-serif">III.</span>
+                <div>
+                  <h4 class="text-xl font-headline text-primary-container mb-3">Pérennité &amp; Confiance</h4>
+                  <p class="text-on-surface-variant">
+                    Une relation de confiance inscrite dans le temps, basée sur la transparence et la discrétion la plus
+                    totale.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Trust Section -->
+      <section class="py-32 bg-surface-container-highest/30">
+        <div class="container mx-auto px-6 md:px-12 text-center max-w-4xl">
+          <h2 class="text-4xl md:text-5xl text-primary-container mb-12">La Confiance se mérite</h2>
+          <p class="text-xl text-on-surface-variant mb-16 italic font-serif leading-relaxed">
+            "Notre métier n'est pas seulement financier ; il est avant tout humain. Nous protégeons ce que nos clients
+            ont mis une vie à bâtir."
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center opacity-60">
+            <div class="flex flex-col items-center gap-2">
+              <div class="w-16 h-16 bg-outline-variant/30 flex items-center justify-center rounded-full mb-4">
+                <span class="material-symbols-outlined text-primary-container">verified_user</span>
+              </div>
+              <p class="text-[10px] uppercase tracking-widest font-bold">Agrément CIF</p>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+              <div class="w-16 h-16 bg-outline-variant/30 flex items-center justify-center rounded-full mb-4">
+                <span class="material-symbols-outlined text-primary-container">policy</span>
+              </div>
+              <p class="text-[10px] uppercase tracking-widest font-bold">Membre ANACOFI</p>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+              <div class="w-16 h-16 bg-outline-variant/30 flex items-center justify-center rounded-full mb-4">
+                <span class="material-symbols-outlined text-primary-container">history_edu</span>
+              </div>
+              <p class="text-[10px] uppercase tracking-widest font-bold">Certification CGP</p>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+              <div class="w-16 h-16 bg-outline-variant/30 flex items-center justify-center rounded-full mb-4">
+                <span class="material-symbols-outlined text-primary-container">gavel</span>
+              </div>
+              <p class="text-[10px] uppercase tracking-widest font-bold">Code Déontologie</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Call to Action -->
+      <section class="bg-primary-container py-32 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+          <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white to-transparent"></div>
+        </div>
+        <div class="container mx-auto px-6 md:px-12 text-center relative z-10">
+          <h2 class="text-4xl md:text-6xl font-headline text-on-primary mb-10 leading-tight">
+            Prêt à valoriser <br />
+            votre patrimoine ?
+          </h2>
+          <button
+            class="bg-secondary text-white px-12 py-6 rounded-sm font-label font-medium tracking-widest hover:bg-[#857342] transition-all duration-300 transform hover:scale-105"
+          >
+            PARLER À UN CONSEILLER
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full border-t border-[#081a3e]/10 bg-[#f4f4ef] dark:bg-[#021338]">
+      <div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full max-w-screen-2xl mx-auto">
+        <div class="mb-8 md:mb-0">
+          <span class="font-serif text-xl font-semibold text-[#081a3e] dark:text-[#fafaf4]">AMS Patrimoine</span>
+          <p class="text-[#45464e] dark:text-slate-400 font-sans text-[10px] tracking-[0.2em] mt-2 uppercase">
+            Conseil &amp; Gestion de Fortune
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+          <a
+            class="font-sans text-sm tracking-wide uppercase text-[#45464e] hover:text-[#6d5d33] transition-colors duration-200"
+            href="#"
+            >Mentions Légales</a
+          >
+          <a
+            class="font-sans text-sm tracking-wide uppercase text-[#45464e] hover:text-[#6d5d33] transition-colors duration-200"
+            href="#"
+            >Politique de Confidentialité</a
+          >
+          <a
+            class="font-sans text-sm tracking-wide uppercase text-[#45464e] hover:text-[#6d5d33] transition-colors duration-200"
+            href="#"
+            >Honoraires</a
+          >
+          <a
+            class="font-sans text-sm tracking-wide uppercase text-[#45464e] hover:text-[#6d5d33] transition-colors duration-200"
+            href="#"
+            >Gestion des Cookies</a
+          >
+        </div>
+        <div
+          class="text-[#45464e] dark:text-slate-400 font-sans text-[10px] tracking-wide uppercase text-center md:text-right"
+        >
+          © 2024 AMS Patrimoine. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

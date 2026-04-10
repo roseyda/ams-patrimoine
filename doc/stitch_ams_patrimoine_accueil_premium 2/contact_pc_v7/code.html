@@ -1,0 +1,336 @@
+<!doctype html>
+
+<html class="light" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact - AMS Patrimoine</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'primary-container': '#081a3e',
+              'on-tertiary': '#ffffff',
+              'on-error': '#ffffff',
+              'primary-fixed': '#dae2ff',
+              'on-surface-variant': '#45464e',
+              'on-tertiary-fixed': '#001945',
+              'tertiary-fixed-dim': '#b0c6ff',
+              'surface-tint': '#4f5d86',
+              'inverse-primary': '#b7c5f4',
+              'tertiary-container': '#001945',
+              'tertiary-fixed': '#d9e2ff',
+              'inverse-surface': '#2f312e',
+              'surface-container-highest': '#e3e3de',
+              'surface-container-high': '#e8e8e3',
+              'secondary-fixed': '#f7e0ac',
+              'primary-fixed-dim': '#b7c5f4',
+              'error-container': '#ffdad6',
+              'on-tertiary-container': '#5c82d5',
+              surface: '#fafaf4',
+              'on-surface': '#1a1c19',
+              error: '#ba1a1a',
+              primary: '#000000',
+              outline: '#75777f',
+              'on-error-container': '#93000a',
+              'on-secondary-fixed': '#241a00',
+              background: '#fafaf4',
+              'on-primary-fixed-variant': '#37466c',
+              'inverse-on-surface': '#f1f1ec',
+              'on-primary-container': '#7483ad',
+              'surface-dim': '#dadad5',
+              'surface-container-lowest': '#ffffff',
+              'surface-container-low': '#f4f4ef',
+              'on-background': '#1a1c19',
+              'on-primary': '#ffffff',
+              'secondary-fixed-dim': '#dac492',
+              'secondary-container': '#f4dea9',
+              tertiary: '#000000',
+              'on-secondary-fixed-variant': '#54451e',
+              'on-secondary-container': '#716137',
+              'on-primary-fixed': '#081a3e',
+              'on-secondary': '#ffffff',
+              secondary: '#6d5d33',
+              'surface-container': '#eeeee9',
+              'outline-variant': '#c5c6cf',
+              'on-tertiary-fixed-variant': '#124393',
+              'surface-variant': '#e3e3de',
+              'surface-bright': '#fafaf4',
+            },
+            borderRadius: {
+              DEFAULT: '0.125rem',
+              lg: '0.25rem',
+              xl: '0.5rem',
+              full: '0.75rem',
+            },
+            fontFamily: {
+              headline: ['Noto Serif'],
+              body: ['Inter'],
+              label: ['Inter'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: 'Noto Serif', serif;
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-[#fafaf4]/70 backdrop-blur-xl no-border bg-gradient-to-b from-[#f4f4ef] to-transparent"
+    >
+      <div class="flex justify-between items-center px-12 py-6 max-w-screen-2xl mx-auto">
+        <div class="flex items-center">
+          <img
+            alt="AMS Patrimoine"
+            class="h-10 w-auto"
+            data-alt="high-resolution monochrome professional corporate logo of AMS Patrimoine in elegant black serif typography"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_HPEl1xD-O134Z6fEXn3V1FtnFzxKdYIBrjTmZgN9iME8UNk3rqFDFKQFlMAByhS7BTylItyd-C0z5tusKxN5s-Q_UJ1-uVmopqTbSGHhodvpUkyxISZ9CKhedGGQQouX7_MxHIOJqN5hiHkje9n6OS2H1KqiOCbmcZQglPEy-CFa0hJ1Ly2Bekh_K80xZqJUVYAKOUQZ9OQcdRgdskQDw8BgfeHLRlMSko4pvNj7VRKD-mlhZ7KsZZbErXp-ePyeQihyaq4Av1fV"
+          />
+        </div>
+        <div class="hidden md:flex items-center space-x-12 font-serif text-lg tracking-tight font-medium">
+          <a class="text-[#45464e] hover:text-[#081a3e] transition-colors duration-300" href="#">Accueil</a>
+          <a class="text-[#45464e] hover:text-[#081a3e] transition-colors duration-300" href="#">Expertise</a>
+          <a class="text-[#45464e] hover:text-[#081a3e] transition-colors duration-300" href="#">L'Approche</a>
+          <a class="text-[#45464e] hover:text-[#081a3e] transition-colors duration-300" href="#">Le Cabinet</a>
+          <a class="text-[#6d5d33] border-b-2 border-[#6d5d33] pb-1" href="#">Contact</a>
+        </div>
+        <button class="md:hidden text-primary">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </nav>
+    <main class="pt-32 pb-24 px-6 md:px-12 max-w-screen-2xl mx-auto">
+      <!-- Hero Header -->
+      <header class="mb-20">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+          <div class="max-w-3xl">
+            <span class="font-label text-xs uppercase tracking-[0.2em] text-secondary font-semibold mb-4 block"
+              >Entrer en relation</span
+            >
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-primary-container">
+              Concrétisons votre <br />
+              <span class="italic font-normal">vision patrimoniale.</span>
+            </h1>
+          </div>
+          <div class="md:pb-4">
+            <p class="text-on-surface-variant max-w-sm font-body leading-relaxed">
+              Un accompagnement sur mesure commence par une écoute attentive. Rencontrons-nous pour définir vos
+              objectifs de demain.
+            </p>
+          </div>
+        </div>
+      </header>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <!-- Contact Info Blade -->
+        <div class="lg:col-span-5 space-y-12">
+          <div class="relative group">
+            <div class="aspect-[4/5] overflow-hidden rounded-sm">
+              <img
+                class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105"
+                data-alt="luxurious minimalist executive office interior with marble surfaces and dramatic soft lighting, professional and clean aesthetic"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlbKplMTKJqi4ZE2-h6w0SJ62EEseCR_X4k2er_l37kCJ2uvkOf4BjZoU-7D72-CG3DD6if_gtbx8XQhKVxXCxScSWwfRAIZlukllUAqUMfWa_prWWuSJFoSXiPQ40jquNJKOOIZsZ457j3PCG33C3m5DaLrZP4KHKf9yg3OIGIC3qrajm-hTOYj_2irMKrlcT1QDWwgXyiJIYjP0C8Yb__0dVWJyEH9QztyS5SLfCcfiuIMWHOLxeVRriZRFcg4nkuA5W-4_fGo2J"
+              />
+            </div>
+            <div
+              class="absolute -bottom-10 -right-10 bg-surface-container-lowest p-10 hidden lg:block border-l-4 border-secondary"
+            >
+              <h3 class="font-headline text-2xl font-bold text-primary-container mb-2">Disponibilité</h3>
+              <p class="text-on-surface-variant font-body text-sm leading-loose">
+                Du Lundi au Vendredi<br />
+                09:00 — 19:00<br />
+                Uniquement sur rendez-vous
+              </p>
+            </div>
+          </div>
+          <div class="pt-8 space-y-8">
+            <div>
+              <p class="font-label text-[10px] uppercase tracking-widest text-outline mb-3">Email Direct</p>
+              <a
+                class="font-headline text-2xl text-primary-container hover:text-secondary transition-colors duration-300"
+                href="mailto:contact@amspatrimoine.fr"
+              >
+                contact@amspatrimoine.fr
+              </a>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+              <div>
+                <p class="font-label text-[10px] uppercase tracking-widest text-outline mb-3">Confidentialité</p>
+                <p class="text-on-surface-variant text-sm font-body">
+                  Vos données sont traitées avec la plus haute rigueur déontologique.
+                </p>
+              </div>
+              <div>
+                <p class="font-label text-[10px] uppercase tracking-widest text-outline mb-3">Expertise</p>
+                <p class="text-on-surface-variant text-sm font-body">Réponse personnalisée sous 48 heures ouvrées.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modern Form Section -->
+        <div class="lg:col-span-7 bg-surface-container-low p-8 md:p-16 rounded-sm">
+          <form class="space-y-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div class="relative">
+                <label class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2"
+                  >Nom Complet</label
+                >
+                <input
+                  class="w-full bg-transparent border-b border-outline-variant/30 py-3 px-0 focus:outline-none focus:border-secondary transition-colors font-body text-primary placeholder:text-outline-variant/50"
+                  placeholder="Jean-Baptiste Lully"
+                  type="text"
+                />
+              </div>
+              <div class="relative">
+                <label class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2"
+                  >Email</label
+                >
+                <input
+                  class="w-full bg-transparent border-b border-outline-variant/30 py-3 px-0 focus:outline-none focus:border-secondary transition-colors font-body text-primary placeholder:text-outline-variant/50"
+                  placeholder="lully@patrimoine.fr"
+                  type="email"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div class="relative">
+                <label class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2"
+                  >Téléphone</label
+                >
+                <input
+                  class="w-full bg-transparent border-b border-outline-variant/30 py-3 px-0 focus:outline-none focus:border-secondary transition-colors font-body text-primary placeholder:text-outline-variant/50"
+                  placeholder="+33 0 00 00 00 00"
+                  type="tel"
+                />
+              </div>
+              <div class="relative">
+                <label class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2"
+                  >Objet</label
+                >
+                <select
+                  class="w-auto min-w-[200px] bg-transparent border-b border-outline-variant/30 py-3 px-0 focus:outline-none focus:border-secondary transition-colors font-body text-primary appearance-none cursor-pointer"
+                >
+                  <option>Gestion Privée</option>
+                  <option>Investissement Immobilier</option>
+                  <option>Optimisation Fiscale</option>
+                  <option>Transmission</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+            </div>
+            <div class="relative">
+              <label class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2"
+                >Votre Message</label
+              >
+              <textarea
+                class="w-full bg-transparent border-b border-outline-variant/30 py-3 px-0 focus:outline-none focus:border-secondary transition-colors font-body text-primary placeholder:text-outline-variant/50 resize-none"
+                placeholder="Décrivez brièvement votre situation..."
+                rows="4"
+              ></textarea>
+            </div>
+            <div class="flex items-start gap-4">
+              <input
+                class="mt-1 rounded-none border-outline-variant text-primary-container focus:ring-secondary"
+                id="consent"
+                type="checkbox"
+              />
+              <label class="text-xs text-on-surface-variant font-body leading-relaxed" for="consent">
+                J'accepte que les informations saisies soient utilisées pour permettre de me recontacter dans le cadre
+                de ma demande.
+              </label>
+            </div>
+            <div class="pt-6">
+              <button
+                class="group flex items-center gap-4 bg-primary-container text-on-primary px-10 py-5 rounded-sm hover:opacity-90 transition-all"
+                type="submit"
+              >
+                <span class="font-label text-xs uppercase tracking-widest">Envoyer la demande</span>
+                <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <!-- Map Section - Glassmorphic Overlay -->
+    <section class="w-full h-[500px] relative bg-surface-container-high overflow-hidden">
+      <div class="absolute inset-0 grayscale opacity-60">
+        <!-- Simulated map or architectural graphic -->
+        <img
+          class="w-full h-full object-cover"
+          data-alt="abstract architectural close-up of modern skyscraper glass facade reflecting bright sunlight, high-end commercial aesthetic"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuvqK3Aa0WxSuDRAGXOpJ0wMnKJiGimUcLzQTYuXeqndk3tPvR-fGLTZVquw-2iuxMDA4_ruJ7izxUfuTFUlyY_V0ItaselvMNATQy0sFdZZRHG4Xmhj1dslk3KTu1PVfqQSi0KxVr8LlbSITFg0KAjKjgSjVqVSmxCfuwgx_-sil7odrXMgiT4ofIaOAeoap74-qGGq4ShyARQfkgO3YdxgoRjIT2s7LgH3ve-yNlOB-9k9CH1mFGtpqHK1GWJMmo76n36TF8faeY"
+        />
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div
+          class="bg-surface/90 backdrop-blur-md p-12 max-w-md text-center pointer-events-auto border border-white/20 shadow-2xl"
+        >
+          <span class="material-symbols-outlined text-secondary text-4xl mb-4">location_on</span>
+          <h3 class="font-headline text-2xl font-bold mb-4">Un Cabinet à votre écoute</h3>
+          <p class="text-on-surface-variant font-body text-sm leading-relaxed mb-6">
+            Nous vous recevons au sein de nos bureaux confidentiels pour une étude approfondie de votre situation.
+          </p>
+          <div class="inline-flex items-center gap-2 text-primary font-semibold text-xs uppercase tracking-widest">
+            Prendre rendez-vous <span class="material-symbols-outlined text-xs">open_in_new</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="w-full border-t border-[#081a3e]/10 bg-[#f4f4ef]">
+      <div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full max-w-screen-2xl mx-auto">
+        <div class="mb-8 md:mb-0">
+          <span class="font-serif text-xl font-semibold text-[#081a3e]">AMS Patrimoine</span>
+          <p class="font-sans text-[10px] tracking-widest uppercase text-[#45464e] mt-2">
+            Expertise &amp; Confidentialité
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-8 font-sans text-sm tracking-wide uppercase text-[#45464e]">
+          <a class="hover:text-[#6d5d33] transition-colors duration-200" href="#">Mentions Légales</a>
+          <a class="hover:text-[#6d5d33] transition-colors duration-200" href="#">Politique de Confidentialité</a>
+          <a class="hover:text-[#6d5d33] transition-colors duration-200" href="#">Honoraires</a>
+          <a class="hover:text-[#6d5d33] transition-colors duration-200" href="#">Gestion des Cookies</a>
+        </div>
+        <div class="mt-8 md:mt-0 font-sans text-sm tracking-wide uppercase text-[#45464e]/60">
+          © 2024 AMS Patrimoine. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
