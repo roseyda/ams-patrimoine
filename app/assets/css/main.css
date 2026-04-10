@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "@nuxt/ui";
+@import 'tailwindcss';
+@import '@nuxt/ui';
 
 @theme {
   /* Couleurs personnalisées basées sur le Design System Heritage Private */
@@ -27,8 +27,8 @@
   --color-accent-900: #2b2318;
 
   /* Typographies */
-  --font-serif: "Noto Serif", serif;
-  --font-sans: "Inter", sans-serif;
+  --font-serif: 'Noto Serif', serif;
+  --font-sans: 'Inter', sans-serif;
 }
 
 /* Styles globaux et overrides Nuxt UI */
@@ -37,7 +37,12 @@
     @apply font-sans text-slate-800 bg-white antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif text-primary-500;
   }
 
