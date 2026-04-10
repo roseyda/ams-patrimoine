@@ -69,29 +69,14 @@
     { icon: 'i-lucide-scale', label: 'Code Déontologie' },
   ];
 
-  // ── Animation ───────────────────────────────────────────────────────
-  // Generic scroll-reveal: fires once when element enters viewport
-  function useReveal(threshold = 0.12) {
-    const target = ref<HTMLElement | null>(null);
-    const visible = ref(false);
-    useIntersectionObserver(
-      target,
-      (entries: IntersectionObserverEntry[]) => {
-        if (entries[0]?.isIntersecting) visible.value = true;
-      },
-      { threshold, rootMargin: '0px 0px -40px 0px' }
-    );
-    return { target, visible };
-  }
-
   // Hero: above fold — trigger after first paint so CSS has time to apply initial state
   const heroReady = ref(false);
 
   // Below-fold sections
-  const { target: expertiseRef, visible: expertiseVisible } = useReveal();
-  const { target: dnaRef, visible: dnaVisible } = useReveal();
-  const { target: trustRef, visible: trustVisible } = useReveal();
-  const { target: ctaRef, visible: ctaVisible } = useReveal();
+  const expertiseVisible = useReveal(useTemplateRef('expertiseRef'));
+  const dnaVisible = useReveal(useTemplateRef('dnaRef'));
+  const trustVisible = useReveal(useTemplateRef('trustRef'));
+  const ctaVisible = useReveal(useTemplateRef('ctaRef'));
 
   onMounted(() => setTimeout(() => (heroReady.value = true), 80));
 

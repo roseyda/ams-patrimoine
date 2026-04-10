@@ -52,26 +52,12 @@
     },
   ];
 
-  // ── Animation helpers ────────────────────────────────────────────────
-  function useReveal(threshold = 0.12) {
-    const target = ref<HTMLElement | null>(null);
-    const visible = ref(false);
-    useIntersectionObserver(
-      target,
-      (entries: IntersectionObserverEntry[]) => {
-        if (entries[0]?.isIntersecting) visible.value = true;
-      },
-      { threshold, rootMargin: '0px 0px -40px 0px' }
-    );
-    return { target, visible };
-  }
-
   // Hero: above fold — trigger after first paint
   const heroReady = ref(false);
 
   // Below-fold sections
-  const { target: gridRef, visible: gridVisible } = useReveal();
-  const { target: quoteRef, visible: quoteVisible } = useReveal();
+  const gridVisible = useReveal(useTemplateRef('gridRef'));
+  const quoteVisible = useReveal(useTemplateRef('quoteRef'));
 
   onMounted(() => setTimeout(() => (heroReady.value = true), 80));
 

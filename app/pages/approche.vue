@@ -82,24 +82,10 @@
     { value: '360°', label: 'Vision Globale' },
   ];
 
-  // ── Animation helpers ────────────────────────────────────────────────
-  function useReveal(threshold = 0.12) {
-    const target = ref<HTMLElement | null>(null);
-    const visible = ref(false);
-    useIntersectionObserver(
-      target,
-      (entries: IntersectionObserverEntry[]) => {
-        if (entries[0]?.isIntersecting) visible.value = true;
-      },
-      { threshold, rootMargin: '0px 0px -40px 0px' }
-    );
-    return { target, visible };
-  }
-
   const heroReady = ref(false);
-  const { target: introRef, visible: introVisible } = useReveal();
-  const { target: timelineRef, visible: timelineVisible } = useReveal(0.05);
-  const { target: signatureRef, visible: signatureVisible } = useReveal();
+  const introVisible = useReveal(useTemplateRef('introRef'));
+  const timelineVisible = useReveal(useTemplateRef('timelineRef'), 0.05);
+  const signatureVisible = useReveal(useTemplateRef('signatureRef'));
 
   onMounted(() => setTimeout(() => (heroReady.value = true), 80));
 
