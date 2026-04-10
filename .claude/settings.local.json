@@ -16,7 +16,12 @@
       "mcp__stitch__list_screens",
       "Bash(pnpm typecheck:*)",
       "Bash(npx nuxt:*)",
-      "Bash(pnpm lint:*)"
+      "Bash(pnpm lint:*)",
+      "mcp__chrome-devtools__list_pages",
+      "Bash(curl:*)",
+      "Bash(grep -r \"center\" node_modules/@nuxt/ui/dist/runtime/components/layout/Header*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)"
     ]
   }
 }
