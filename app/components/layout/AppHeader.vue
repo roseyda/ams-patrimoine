@@ -1,9 +1,30 @@
 <script setup lang="ts">
-  import type { NavLink } from '~/types/navigation';
+  import type { NavigationMenuItem } from '@nuxt/ui';
 
-  const navItems: NavLink[] = [
+  const navItems: NavigationMenuItem[] = [
     { label: 'Accueil', to: '/' },
-    { label: 'Expertise', to: '/expertise' },
+    {
+      label: 'Expertise',
+      to: '/expertise',
+      children: [
+        {
+          label: 'Dirigeants',
+          to: '/expertise/dirigeants',
+        },
+        {
+          label: 'Particuliers',
+          to: '/expertise/particuliers',
+        },
+        {
+          label: 'Stratégie Patrimoniale',
+          to: '/expertise/patrimoine',
+        },
+        {
+          label: 'Investissement',
+          to: '/expertise/finance',
+        },
+      ],
+    },
     { label: "L'Approche", to: '/approche' },
     { label: 'Le Cabinet', to: '/cabinet' },
     { label: 'Contact', to: '/contact' },

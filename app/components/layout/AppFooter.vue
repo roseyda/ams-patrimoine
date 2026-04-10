@@ -1,9 +1,12 @@
 <script setup lang="ts">
-  import type { NavLink } from '~/types/navigation';
+  interface FooterLink {
+    label: string;
+    to: string;
+  }
 
   const currentYear: number = new Date().getFullYear();
 
-  const navigation: NavLink[] = [
+  const navigation: FooterLink[] = [
     { label: 'Accueil', to: '/' },
     { label: 'Expertise', to: '/expertise' },
     { label: "L'Approche", to: '/approche' },
@@ -11,14 +14,14 @@
     { label: 'Contact', to: '/contact' },
   ];
 
-  const expertise: NavLink[] = [
+  const expertise: FooterLink[] = [
     { label: 'Accompagnement Dirigeants', to: '/expertise/dirigeants' },
     { label: 'Accompagnement Particuliers', to: '/expertise/particuliers' },
     { label: 'Strategie Patrimoniale', to: '/expertise/patrimoine' },
     { label: 'Strategie Financiere', to: '/expertise/finance' },
   ];
 
-  const legal: NavLink[] = [
+  const legal: FooterLink[] = [
     { label: 'Mentions legales', to: '/mentions-legales' },
     { label: 'Politique de confidentialite', to: '/confidentialite' },
   ];
