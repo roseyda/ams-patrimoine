@@ -31,7 +31,11 @@
       "Read(//tmp/**)",
       "Bash(grep -ohP '\\\\[#[0-9a-fA-F]{6}\\\\]' app/pages/**/*.vue app/pages/*.vue app/components/**/*.vue)",
       "Bash(find app/pages app/components -name '*.vue' -exec sed -i '' -e 's/\\\\[#6d5d33\\\\]/gold-500/g' -e 's/\\\\[#45464e\\\\]/sand-700/g' -e 's/\\\\[#081a3e\\\\]/navy-500/g' -e 's/\\\\[#000000\\\\]/black/g' -e 's/\\\\[#c5c6cf\\\\]/sand-500/g' -e 's/\\\\[#7483ad\\\\]/navy-300/g' -e 's/\\\\[#fafaf4\\\\]/sand-100/g' -e 's/\\\\[#e8e8e3\\\\]/sand-300/g' -e 's/\\\\[#75777f\\\\]/sand-600/g' -e 's/\\\\[#f7e0ac\\\\]/gold-100/g' -e 's/\\\\[#e3e3de\\\\]/sand-400/g' -e 's/\\\\[600px\\\\]/150/g' -e 's/\\\\[500px\\\\]/125/g' -e 's/\\\\[400px\\\\]/100/g' '{}' +)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(grep -n 'text-black\\\\b' app/pages/**/*.vue app/pages/*.vue)",
+      "Bash(grep -v ':0$')",
+      "Bash(find app/pages -name '*.vue' -exec sed -i '' -e 's/text-black\\\\b/text-navy-500/g' -e s/border-black/border-navy-500/g '{}' +)",
+      "Bash(find app/pages -name '*.vue' -exec perl -pi -e 's/text-black\\(?=[\\\\s\"\\\\/]\\)/text-navy-500/g; s/border-black\\(?=[\\\\s\"\\\\/]\\)/border-navy-500/g' {} +)"
     ]
   }
 }

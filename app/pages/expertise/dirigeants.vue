@@ -45,7 +45,7 @@
           </span>
 
           <h1
-            class="mb-8 font-serif text-6xl leading-tight font-bold text-black transition-all duration-700 ease-out md:text-7xl"
+            class="text-navy-500 mb-8 font-serif text-6xl leading-tight font-bold transition-all duration-700 ease-out md:text-7xl"
             style="letter-spacing: -0.02em; transition-delay: 150ms"
             :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'"
           >
@@ -94,7 +94,7 @@
           class="mb-20 transition-all duration-700 ease-out"
           :class="bentoVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
         >
-          <h2 class="mb-4 font-serif text-4xl font-bold text-black">Une Approche Globale.</h2>
+          <h2 class="text-navy-500 mb-4 font-serif text-4xl font-bold">Une Approche Globale.</h2>
           <div class="bg-gold-500 h-1 w-24"></div>
         </div>
 
@@ -140,7 +140,7 @@
             style="transition-delay: 300ms"
           >
             <UIcon name="i-lucide-log-out" class="text-gold-500 mb-8 text-4xl" />
-            <h3 class="mb-4 font-serif text-2xl font-bold text-black">Exit Strategy</h3>
+            <h3 class="text-navy-500 mb-4 font-serif text-2xl font-bold">Exit Strategy</h3>
             <p class="text-sand-700 leading-relaxed">
               Accompagnement dans la préparation de la cession d'entreprise : apport-cession (150-0 B ter) et
               réinvestissement.
@@ -204,7 +204,7 @@
           style="background: rgba(250, 250, 244, 0.7); backdrop-filter: blur(16px)"
           :class="ctaVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
         >
-          <h2 class="mb-6 font-serif text-4xl font-bold text-black">
+          <h2 class="text-navy-500 mb-6 font-serif text-4xl font-bold">
             Prêt à sécuriser votre avenir professionnel&nbsp;?
           </h2>
           <p class="text-sand-700 mx-auto mb-10 max-w-xl text-lg leading-relaxed">

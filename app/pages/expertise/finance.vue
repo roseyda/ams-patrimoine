@@ -29,7 +29,7 @@
       <div class="grid grid-cols-1 items-end gap-12 md:grid-cols-12">
         <div class="md:col-span-7">
           <h1
-            class="mb-8 font-serif text-7xl leading-tight font-bold text-black transition-all duration-700 ease-out"
+            class="text-navy-500 mb-8 font-serif text-7xl leading-tight font-bold transition-all duration-700 ease-out"
             style="letter-spacing: -0.02em; transition-delay: 150ms"
             :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
           >
@@ -52,7 +52,7 @@
         >
           <div class="text-gold-500 font-sans text-xs font-bold tracking-widest uppercase">Market Insight</div>
           <div class="flex items-center gap-4">
-            <span class="font-serif text-5xl font-light text-black">0%</span>
+            <span class="text-navy-500 font-serif text-5xl font-light">0%</span>
             <p class="text-sand-700 text-sm">
               Conflit d'intérêts grâce à une structure de rémunération transparente et indépendante.
             </p>
@@ -77,7 +77,7 @@
         class="absolute -bottom-16 left-12 max-w-2xl rounded-sm bg-white p-12 shadow-2xl transition-all duration-700 ease-out md:left-24"
         :class="bladeVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
       >
-        <h2 class="mb-6 font-serif text-4xl font-bold text-black">Architecture Ouverte</h2>
+        <h2 class="text-navy-500 mb-6 font-serif text-4xl font-bold">Architecture Ouverte</h2>
         <p class="text-sand-700 mb-8 leading-relaxed">
           À la différence des banques de réseau, AMS Patrimoine accède à l'intégralité des solutions du marché mondial.
           Cette liberté nous permet de construire des portefeuilles sur-mesure, sans biais institutionnel.
@@ -103,7 +103,7 @@
           :class="performanceVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
         >
           <div class="max-w-xl">
-            <h2 class="mb-6 font-serif text-5xl font-bold text-black">Gestion d'Actifs &amp; Pilotage</h2>
+            <h2 class="text-navy-500 mb-6 font-serif text-5xl font-bold">Gestion d'Actifs &amp; Pilotage</h2>
             <p class="text-sand-700 text-lg leading-relaxed">
               Nous appliquons une rigueur quantitative alliée à une analyse macroéconomique fine pour optimiser le
               couple rendement/risque de votre patrimoine.
@@ -116,7 +116,7 @@
               class="border-sand-500/20 bg-sand-100 rounded-sm border-b p-6"
             >
               <UIcon :name="card.icon" class="text-gold-500 mb-4 block" />
-              <div class="font-serif text-2xl font-bold text-black">{{ card.title }}</div>
+              <div class="text-navy-500 font-serif text-2xl font-bold">{{ card.title }}</div>
               <p class="text-sand-700 mt-2 font-sans text-xs tracking-wider uppercase">{{ card.subtitle }}</p>
             </div>
           </div>
@@ -148,7 +148,7 @@
             :class="performanceVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
             style="transition-delay: 200ms"
           >
-            <h3 class="mb-4 font-serif text-xl font-bold text-black">Gestion Sous Mandat</h3>
+            <h3 class="text-navy-500 mb-4 font-serif text-xl font-bold">Gestion Sous Mandat</h3>
             <p class="text-sand-700 mb-6 text-sm">
               Déléguez le quotidien de vos investissements à nos experts pour une réactivité maximale.
             </p>
@@ -166,7 +166,7 @@
             :class="performanceVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
             style="transition-delay: 300ms"
           >
-            <h3 class="mb-4 font-serif text-xl font-bold text-black">Conseil en Investissement</h3>
+            <h3 class="text-navy-500 mb-4 font-serif text-xl font-bold">Conseil en Investissement</h3>
             <p class="text-sand-700 mb-6 text-sm">
               Gardez le contrôle tout en bénéficiant de nos analyses et recommandations tactiques.
             </p>

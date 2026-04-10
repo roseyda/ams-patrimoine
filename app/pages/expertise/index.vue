@@ -77,7 +77,7 @@
         </span>
 
         <h1
-          class="mb-8 font-serif text-5xl leading-tight font-bold text-black transition-all duration-700 ease-out md:text-7xl"
+          class="text-navy-500 mb-8 font-serif text-5xl leading-tight font-bold transition-all duration-700 ease-out md:text-7xl"
           style="letter-spacing: -0.02em; transition-delay: 150ms"
           :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'"
         >
@@ -133,7 +133,7 @@
                   />
                 </div>
                 <h2
-                  class="group-hover:text-gold-500 mb-4 font-serif text-3xl text-black transition-colors duration-300"
+                  class="group-hover:text-gold-500 text-navy-500 mb-4 font-serif text-3xl transition-colors duration-300"
                 >
                   {{ title }}
                 </h2>
@@ -177,7 +177,7 @@
           >
             <div class="border-gold-500 border-l-4 bg-white p-12 shadow-xl lg:p-20">
               <UIcon name="i-lucide-quote" class="text-gold-500 mb-6 text-5xl" />
-              <h3 class="mb-8 font-serif text-3xl leading-snug text-black italic">
+              <h3 class="text-navy-500 mb-8 font-serif text-3xl leading-snug italic">
                 "Le patrimoine n'est pas seulement une accumulation de valeurs, c'est l'expression d'une liberté que
                 nous avons le devoir de protéger."
               </h3>

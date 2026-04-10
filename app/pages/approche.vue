@@ -109,7 +109,7 @@
           </span>
 
           <h1
-            class="mb-8 font-serif text-6xl leading-[1.1] font-bold text-black transition-all duration-700 ease-out md:text-7xl"
+            class="text-navy-500 mb-8 font-serif text-6xl leading-[1.1] font-bold transition-all duration-700 ease-out md:text-7xl"
             style="letter-spacing: -0.02em; transition-delay: 150ms"
             :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'"
           >
@@ -155,7 +155,7 @@
             style="transition-delay: 700ms"
             :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'"
           >
-            <p class="mb-2 font-serif text-xl text-black">Excellence</p>
+            <p class="text-navy-500 mb-2 font-serif text-xl">Excellence</p>
             <p class="text-sand-700 text-sm leading-relaxed font-light">
               Chaque stratégie est une pièce unique, conçue pour résister au temps.
             </p>
@@ -173,7 +173,7 @@
             class="transition-all duration-700 ease-out md:w-1/3"
             :class="introVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
           >
-            <h2 class="font-serif text-4xl leading-tight text-black" style="letter-spacing: -0.02em">
+            <h2 class="text-navy-500 font-serif text-4xl leading-tight" style="letter-spacing: -0.02em">
               Une vision holistique de vos actifs
             </h2>
           </div>
@@ -189,7 +189,7 @@
                 :style="{ transitionDelay: `${150 + i * 150}ms` }"
               >
                 <UIcon :name="block.icon" class="text-gold-500 text-3xl" />
-                <h3 class="font-serif text-xl text-black">{{ block.title }}</h3>
+                <h3 class="text-navy-500 font-serif text-xl">{{ block.title }}</h3>
                 <p class="text-sand-700 leading-relaxed font-light">{{ block.description }}</p>
               </div>
             </div>
@@ -209,7 +209,9 @@
           <span class="text-gold-500 mb-4 block font-sans text-xs font-semibold tracking-[0.2em] uppercase">
             Notre Méthodologie
           </span>
-          <h2 class="font-serif text-5xl text-black" style="letter-spacing: -0.02em">Un parcours en quatre étapes</h2>
+          <h2 class="text-navy-500 font-serif text-5xl" style="letter-spacing: -0.02em">
+            Un parcours en quatre étapes
+          </h2>
         </div>
 
         <!-- Steps -->
@@ -241,7 +243,7 @@
                 <span class="text-gold-500/20 mb-2 block font-serif text-7xl font-bold">
                   {{ step.number }}
                 </span>
-                <h3 class="mb-6 font-serif text-3xl text-black">{{ step.title }}</h3>
+                <h3 class="text-navy-500 mb-6 font-serif text-3xl">{{ step.title }}</h3>
                 <p
                   class="text-sand-700 mx-auto max-w-md text-lg leading-relaxed font-light"
                   :class="step.reversed ? '' : 'mr-0 ml-auto'"
@@ -337,7 +339,7 @@
             <div
               class="border-navy-500 absolute -right-10 -bottom-10 hidden w-2/3 border-l-4 bg-white p-10 shadow-xl md:block"
             >
-              <h4 class="mb-4 font-serif text-2xl text-black">Rigueur &amp; Transparence</h4>
+              <h4 class="text-navy-500 mb-4 font-serif text-2xl">Rigueur &amp; Transparence</h4>
               <p class="text-sand-700 text-sm leading-relaxed font-light">
                 Nos honoraires sont clairs, nos processus documentés. La confiance ne s'accorde pas, elle se construit
                 brique par brique.
@@ -352,7 +354,7 @@
             :class="signatureVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'"
           >
             <div class="space-y-4">
-              <h3 class="font-serif text-3xl text-black" style="letter-spacing: -0.02em">
+              <h3 class="text-navy-500 font-serif text-3xl" style="letter-spacing: -0.02em">
                 Une ingénierie de précision
               </h3>
               <p class="text-sand-700 text-lg leading-relaxed font-light">
@@ -389,7 +391,7 @@
               >
                 <UIcon name="i-lucide-phone" />
               </span>
-              <span class="border-b border-black/20 pb-1 font-serif text-lg text-black">
+              <span class="border-navy-500/20 text-navy-500 border-b pb-1 font-serif text-lg">
                 Prendre rendez-vous pour un audit
               </span>
             </NuxtLink>
