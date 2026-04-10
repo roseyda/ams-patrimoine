@@ -32,27 +32,20 @@
     'Optimisation des donations entre époux',
   ];
 
-  const heroReady = ref(false);
+  const heroReady = useHeroReady();
   const servicesVisible = useReveal(useTemplateRef('servicesRef'));
   const transmissionVisible = useReveal(useTemplateRef('transmissionRef'));
   const ctaVisible = useReveal(useTemplateRef('ctaRef'));
 
-  onMounted(() => setTimeout(() => (heroReady.value = true), 80));
-
-  useHead({
+  useSeoMeta({
     title: 'Accompagnement Particuliers — AMS Patrimoine',
-    meta: [
-      {
-        name: 'description',
-        content:
-          'Un accompagnement sur-mesure pour les familles exigeantes, alliant protection, pérennité et vision long-terme.',
-      },
-    ],
+    description:
+      'Un accompagnement sur-mesure pour les familles exigeantes, alliant protection, pérennité et vision long-terme.',
   });
 </script>
 
 <template>
-  <div class="bg-[#fafaf4] text-[#1a1c19]">
+  <div class="bg-sand-100 text-sand-900">
     <!-- ─── Hero ─── -->
     <section class="relative flex min-h-[85vh] items-center overflow-hidden">
       <div class="absolute inset-0 z-0">
@@ -70,40 +63,35 @@
           style="transition-delay: 200ms"
           :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'"
         >
-          <span class="mb-6 block font-sans text-xs font-semibold tracking-[0.2em] text-[#6d5d33] uppercase">
+          <span class="text-gold-500 mb-6 block font-sans text-xs font-semibold tracking-[0.2em] uppercase">
             Services aux Particuliers
           </span>
-          <h1 class="mb-8 font-serif text-5xl leading-tight text-[#081a3e] md:text-6xl" style="letter-spacing: -0.04em">
+          <h1 class="text-navy-500 mb-8 font-serif text-5xl leading-tight md:text-6xl" style="letter-spacing: -0.04em">
             Élever votre patrimoine au rang d'héritage.
           </h1>
-          <p class="mb-10 max-w-md text-lg leading-relaxed text-[#45464e]">
+          <p class="text-sand-700 mb-10 max-w-md text-lg leading-relaxed">
             Un accompagnement sur-mesure pour les familles exigeantes, alliant protection, pérennité et vision
             long-terme.
           </p>
-          <NuxtLink
-            to="/expertise"
-            class="rounded-sm bg-[#081a3e] px-10 py-5 font-sans text-sm font-medium tracking-widest text-white uppercase transition-opacity hover:opacity-90"
-          >
-            Découvrir notre expertise
-          </NuxtLink>
+          <UButton label="Découvrir notre expertise" to="/expertise" size="xl" />
         </div>
       </div>
     </section>
 
     <!-- ─── Services Grid ─── -->
-    <section ref="servicesRef" class="bg-[#fafaf4] py-32">
+    <section ref="servicesRef" class="bg-sand-100 py-32">
       <div class="container mx-auto px-6 md:px-12">
         <div
           class="mb-24 grid grid-cols-1 items-end gap-12 transition-all duration-700 ease-out md:grid-cols-12"
           :class="servicesVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
         >
           <div class="md:col-span-6">
-            <h2 class="font-serif text-4xl font-bold tracking-tight text-[#081a3e] md:text-5xl">
+            <h2 class="text-navy-500 font-serif text-4xl font-bold tracking-tight md:text-5xl">
               Une approche holistique de vos actifs.
             </h2>
           </div>
           <div class="md:col-span-6">
-            <p class="border-l-2 border-[#6d5d33] pl-8 text-xl leading-relaxed text-[#45464e] italic">
+            <p class="border-gold-500 text-sand-700 border-l-2 pl-8 text-xl leading-relaxed italic">
               "La gestion privée ne se limite pas aux chiffres ; elle s'inscrit dans l'histoire et les projets d'une
               vie."
             </p>
@@ -114,17 +102,17 @@
           <div
             v-for="(card, i) in serviceCards"
             :key="card.title"
-            class="group flex min-h-[400px] flex-col justify-between bg-[#f4f4ef] p-12 transition-all duration-700 ease-out hover:bg-[#e8e8e3]"
+            class="group bg-sand-200 hover:bg-sand-300 flex min-h-100 flex-col justify-between p-12 transition-all duration-700 ease-out"
             :class="servicesVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
             :style="{ transitionDelay: `${i * 150}ms` }"
           >
             <div>
-              <UIcon :name="card.icon" class="mb-8 text-4xl text-[#6d5d33]" />
-              <h3 class="mb-4 font-serif text-2xl text-[#081a3e]">{{ card.title }}</h3>
-              <p class="leading-relaxed text-[#45464e]">{{ card.description }}</p>
+              <UIcon :name="card.icon" class="text-gold-500 mb-8 text-4xl" />
+              <h3 class="text-navy-500 mb-4 font-serif text-2xl">{{ card.title }}</h3>
+              <p class="text-sand-700 leading-relaxed">{{ card.description }}</p>
             </div>
             <div
-              class="mt-8 flex translate-x-0 items-center font-sans text-xs font-bold tracking-widest text-[#6d5d33] uppercase transition-transform group-hover:translate-x-2"
+              class="text-gold-500 mt-8 flex translate-x-0 items-center font-sans text-xs font-bold tracking-widest uppercase transition-transform group-hover:translate-x-2"
             >
               En savoir plus
               <UIcon name="i-lucide-arrow-right" class="ml-2 text-sm" />
@@ -135,14 +123,14 @@
     </section>
 
     <!-- ─── Transmission Section ─── -->
-    <section ref="transmissionRef" class="py-32" style="background-color: #f4f4ef">
+    <section ref="transmissionRef" class="bg-sand-200 py-32">
       <div class="container mx-auto grid grid-cols-1 items-center gap-20 px-6 md:px-12 lg:grid-cols-2">
         <!-- Image -->
         <div
           class="relative order-2 transition-all duration-700 ease-out lg:order-1"
           :class="transmissionVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'"
         >
-          <div class="aspect-[4/5] overflow-hidden rounded-sm">
+          <div class="aspect-4/5 overflow-hidden rounded-sm">
             <NuxtImg
               src="/images/particuliers/leather-case.jpg"
               alt="Serviette en cuir et stylo plume — transmission patrimoniale"
@@ -151,10 +139,10 @@
               loading="lazy"
             />
           </div>
-          <div class="absolute -right-0 -bottom-10 hidden bg-white p-12 shadow-xl md:right-10 md:block">
-            <span class="mb-4 block font-serif text-5xl text-[#6d5d33] italic">04.</span>
-            <h4 class="mb-2 font-serif text-xl text-[#081a3e]">Ingénierie Successorale</h4>
-            <p class="text-sm text-[#45464e]">Préparer demain, aujourd'hui.</p>
+          <div class="absolute right-0 -bottom-10 hidden bg-white p-12 shadow-xl md:right-10 md:block">
+            <span class="text-gold-500 mb-4 block font-serif text-5xl italic">04.</span>
+            <h4 class="text-navy-500 mb-2 font-serif text-xl">Ingénierie Successorale</h4>
+            <p class="text-sand-700 text-sm">Préparer demain, aujourd'hui.</p>
           </div>
         </div>
 
@@ -164,22 +152,22 @@
           style="transition-delay: 200ms"
           :class="transmissionVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'"
         >
-          <h2 class="mb-8 font-serif text-4xl font-bold text-[#081a3e] md:text-5xl" style="letter-spacing: -0.02em">
+          <h2 class="text-navy-500 mb-8 font-serif text-4xl font-bold md:text-5xl" style="letter-spacing: -0.02em">
             L'art de la transmission.
           </h2>
-          <p class="mb-8 text-lg leading-relaxed text-[#45464e]">
+          <p class="text-sand-700 mb-8 text-lg leading-relaxed">
             La transmission d'un patrimoine est une étape clé de la vie patrimoniale. Nous vous accompagnons pour
             définir la stratégie la plus adaptée à votre situation familiale et vos objectifs de protection.
           </p>
           <ul class="mb-12 space-y-6">
             <li v-for="point in transmissionPoints" :key="point" class="flex items-start">
-              <UIcon name="i-lucide-check-circle" class="mr-4 shrink-0 text-[#6d5d33]" />
-              <span class="font-medium text-[#081a3e]">{{ point }}</span>
+              <UIcon name="i-lucide-check-circle" class="text-gold-500 mr-4 shrink-0" />
+              <span class="text-navy-500 font-medium">{{ point }}</span>
             </li>
           </ul>
           <NuxtLink
             to="/contact"
-            class="border-b border-[#081a3e] pb-2 font-sans text-sm tracking-widest text-[#081a3e] uppercase transition-colors hover:border-[#6d5d33] hover:text-[#6d5d33]"
+            class="border-navy-500 text-navy-500 hover:border-gold-500 hover:text-gold-500 border-b pb-2 font-sans text-sm tracking-widest uppercase transition-colors"
           >
             Consulter notre guide de transmission
           </NuxtLink>
@@ -197,27 +185,22 @@
         >
           <!-- CTA card -->
           <div
-            class="relative flex flex-col justify-center overflow-hidden bg-[#081a3e] p-16 md:col-span-2 md:row-span-2"
+            class="bg-navy-500 relative flex flex-col justify-center overflow-hidden p-16 md:col-span-2 md:row-span-2"
           >
             <div class="relative z-10">
               <h2 class="mb-8 font-serif text-4xl leading-tight text-white">
                 Prêt à dessiner les contours de votre futur financier&nbsp;?
               </h2>
-              <p class="mb-12 max-w-sm text-lg text-[#7483ad]">
+              <p class="text-navy-300 mb-12 max-w-sm text-lg">
                 Prenez rendez-vous pour un audit patrimonial complet et confidentiel.
               </p>
-              <NuxtLink
-                to="/contact"
-                class="rounded-sm bg-[#fafaf4] px-10 py-5 font-sans text-xs font-bold tracking-[0.2em] text-[#081a3e] uppercase"
-              >
-                Contacter un conseiller
-              </NuxtLink>
+              <UButton label="Contacter un conseiller" to="/contact" color="neutral" variant="soft" size="xl" />
             </div>
-            <div class="absolute -top-32 -right-32 h-64 w-64 rounded-full bg-[#6d5d33] opacity-10"></div>
+            <div class="bg-gold-500 absolute -top-32 -right-32 h-64 w-64 rounded-full opacity-10"></div>
           </div>
 
           <!-- Image panel -->
-          <div class="hidden bg-[#f4f4ef] md:col-span-1 md:row-span-1 md:block">
+          <div class="bg-sand-200 hidden md:col-span-1 md:row-span-1 md:block">
             <NuxtImg
               src="/images/cabinet/portrait.jpg"
               alt="Conseil patrimonial haut de gamme"
@@ -227,16 +210,16 @@
           </div>
 
           <!-- Philosophy card -->
-          <div class="flex flex-col justify-end bg-[#f4f4ef] p-12 md:col-span-1 md:row-span-2">
-            <h4 class="mb-4 font-serif text-xl text-[#081a3e]">Notre Philosophie</h4>
-            <p class="text-sm leading-relaxed text-[#45464e]">
+          <div class="bg-sand-200 flex flex-col justify-end p-12 md:col-span-1 md:row-span-2">
+            <h4 class="text-navy-500 mb-4 font-serif text-xl">Notre Philosophie</h4>
+            <p class="text-sand-700 text-sm leading-relaxed">
               Engagement, discrétion et excellence opérationnelle au service de votre réussite.
             </p>
           </div>
 
           <!-- Badge -->
           <div
-            class="flex flex-col items-center justify-center bg-[#6d5d33] p-12 text-center md:col-span-1 md:row-span-1"
+            class="bg-gold-500 flex flex-col items-center justify-center p-12 text-center md:col-span-1 md:row-span-1"
           >
             <UIcon name="i-lucide-shield-check" class="mb-4 text-5xl text-white" />
             <p class="font-sans text-xs font-bold tracking-widest text-white uppercase">Cabinet Agréé</p>

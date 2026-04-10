@@ -42,7 +42,7 @@
         size="sm"
         class="hidden rounded-sm sm:inline-flex"
         :ui="{
-          base: 'bg-gradient-to-r from-primary-500 to-[#081a3e] hover:from-[#081a3e] hover:to-primary-500 text-white border-0',
+          base: 'bg-gradient-to-r from-primary-500 to-navy-500 hover:from-navy-500 hover:to-primary-500 text-white border-0',
         }"
       />
     </template>

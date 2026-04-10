@@ -52,51 +52,42 @@
     },
   ];
 
-  // Hero: above fold — trigger after first paint
-  const heroReady = ref(false);
+  const heroReady = useHeroReady();
 
-  // Below-fold sections
   const gridVisible = useReveal(useTemplateRef('gridRef'));
   const quoteVisible = useReveal(useTemplateRef('quoteRef'));
 
-  onMounted(() => setTimeout(() => (heroReady.value = true), 80));
-
-  useHead({
+  useSeoMeta({
     title: 'Expertise — AMS Patrimoine',
-    meta: [
-      {
-        name: 'description',
-        content:
-          'Découvrez nos domaines de compétence : accompagnement dirigeants, particuliers, stratégie patrimoniale et financière. Une expertise multidimensionnelle au service de votre avenir.',
-      },
-    ],
+    description:
+      'Découvrez nos domaines de compétence : accompagnement dirigeants, particuliers, stratégie patrimoniale et financière. Une expertise multidimensionnelle au service de votre avenir.',
   });
 </script>
 
 <template>
-  <div class="bg-[#fafaf4] text-[#1a1c19]">
+  <div class="bg-sand-100 text-sand-900">
     <!-- ─── Hero ─── -->
     <section class="container mx-auto px-6 pt-36 pb-20 md:px-12">
       <div class="max-w-3xl">
         <span
-          class="mb-4 block font-sans text-sm font-semibold tracking-[0.2em] text-[#6d5d33] uppercase transition-all duration-700 ease-out"
+          class="text-gold-500 mb-4 block font-sans text-sm font-semibold tracking-[0.2em] uppercase transition-all duration-700 ease-out"
           :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'"
         >
           Domaines de Compétence
         </span>
 
         <h1
-          class="mb-8 font-serif text-5xl leading-tight font-bold text-[#000000] transition-all duration-700 ease-out md:text-7xl"
+          class="mb-8 font-serif text-5xl leading-tight font-bold text-black transition-all duration-700 ease-out md:text-7xl"
           style="letter-spacing: -0.02em; transition-delay: 150ms"
           :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'"
         >
           Une expertise
-          <span class="font-normal text-[#6d5d33] italic">multidimensionnelle</span>
+          <span class="text-gold-500 font-normal italic">multidimensionnelle</span>
           au service de votre avenir.
         </h1>
 
         <p
-          class="max-w-2xl text-xl leading-relaxed text-[#45464e] transition-all duration-700 ease-out"
+          class="text-sand-700 max-w-2xl text-xl leading-relaxed transition-all duration-700 ease-out"
           style="transition-delay: 300ms"
           :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'"
         >
@@ -107,7 +98,7 @@
     </section>
 
     <!-- ─── Expertise Grid ─── -->
-    <section ref="gridRef" class="py-24" style="background-color: #f4f4ef">
+    <section ref="gridRef" class="bg-sand-200 py-24">
       <div class="container mx-auto px-6 md:px-12">
         <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:gap-16">
           <NuxtLink
@@ -133,24 +124,24 @@
               <!-- Card content -->
               <div class="p-10">
                 <div class="mb-6 flex items-start justify-between">
-                  <span class="font-sans text-xs font-semibold tracking-widest text-[#6d5d33] uppercase">
+                  <span class="text-gold-500 font-sans text-xs font-semibold tracking-widest uppercase">
                     {{ category }}
                   </span>
                   <UIcon
                     name="i-lucide-arrow-right"
-                    class="text-[#6d5d33] transition-transform duration-300 group-hover:translate-x-2"
+                    class="text-gold-500 transition-transform duration-300 group-hover:translate-x-2"
                   />
                 </div>
                 <h2
-                  class="mb-4 font-serif text-3xl text-[#000000] transition-colors duration-300 group-hover:text-[#6d5d33]"
+                  class="group-hover:text-gold-500 mb-4 font-serif text-3xl text-black transition-colors duration-300"
                 >
                   {{ title }}
                 </h2>
-                <p class="mb-8 leading-relaxed text-[#45464e]">
+                <p class="text-sand-700 mb-8 leading-relaxed">
                   {{ description }}
                 </p>
                 <p
-                  class="inline-flex items-center font-sans text-sm font-semibold tracking-widest text-[#081a3e] uppercase transition-colors duration-300 hover:text-[#6d5d33]"
+                  class="text-navy-500 hover:text-gold-500 inline-flex items-center font-sans text-sm font-semibold tracking-widest uppercase transition-colors duration-300"
                 >
                   {{ ctaLabel }}
                 </p>
@@ -162,7 +153,7 @@
     </section>
 
     <!-- ─── Signature Quote Section ─── -->
-    <section ref="quoteRef" class="py-32" style="background-color: #fafaf4">
+    <section ref="quoteRef" class="bg-sand-100 py-32">
       <div class="container mx-auto px-6 md:px-12">
         <div class="relative grid grid-cols-1 items-center lg:grid-cols-12">
           <!-- Image: slides in from left -->
@@ -173,26 +164,26 @@
             <NuxtImg
               src="/images/expertise/quote-portrait.jpg"
               alt="Expert AMS Patrimoine — soin du détail"
-              class="h-[600px] w-full rounded-sm object-cover grayscale"
+              class="h-150 w-full rounded-sm object-cover grayscale"
               loading="lazy"
             />
           </div>
 
           <!-- Quote card: slides in from right, delayed -->
           <div
-            class="z-10 mt-[-6rem] transition-all duration-700 ease-out lg:col-span-6 lg:mt-0 lg:-ml-24"
+            class="z-10 -mt-24 transition-all duration-700 ease-out lg:col-span-6 lg:mt-0 lg:-ml-24"
             style="transition-delay: 200ms"
             :class="quoteVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'"
           >
-            <div class="border-l-4 border-[#6d5d33] bg-white p-12 shadow-xl lg:p-20">
-              <UIcon name="i-lucide-quote" class="mb-6 text-5xl text-[#6d5d33]" />
-              <h3 class="mb-8 font-serif text-3xl leading-snug text-[#000000] italic">
+            <div class="border-gold-500 border-l-4 bg-white p-12 shadow-xl lg:p-20">
+              <UIcon name="i-lucide-quote" class="text-gold-500 mb-6 text-5xl" />
+              <h3 class="mb-8 font-serif text-3xl leading-snug text-black italic">
                 "Le patrimoine n'est pas seulement une accumulation de valeurs, c'est l'expression d'une liberté que
                 nous avons le devoir de protéger."
               </h3>
               <div class="flex items-center gap-4">
-                <div class="h-px w-12 bg-[#6d5d33]"></div>
-                <p class="font-sans text-sm font-bold tracking-widest text-[#6d5d33] uppercase">AMS Patrimoine</p>
+                <div class="bg-gold-500 h-px w-12"></div>
+                <p class="text-gold-500 font-sans text-sm font-bold tracking-widest uppercase">AMS Patrimoine</p>
               </div>
             </div>
           </div>

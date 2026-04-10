@@ -5,5 +5,10 @@ export default defineAppConfig({
       secondary: 'gold',
       neutral: 'sand',
     },
+    button: {
+      defaultVariants: {
+        color: 'primary',
+      },
+    },
   },
 });

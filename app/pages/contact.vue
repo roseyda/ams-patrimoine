@@ -8,49 +8,53 @@
     consent: boolean;
   }
 
-  const subjects = ['Gestion Privée', 'Investissement Immobilier', 'Optimisation Fiscale', 'Transmission', 'Autre'];
+  interface SelectItem {
+    label: string;
+    value: string;
+  }
+
+  const subjectItems: SelectItem[] = [
+    { label: 'Gestion Privée', value: 'gestion-privee' },
+    { label: 'Investissement Immobilier', value: 'investissement-immobilier' },
+    { label: 'Optimisation Fiscale', value: 'optimisation-fiscale' },
+    { label: 'Transmission', value: 'transmission' },
+    { label: 'Autre', value: 'autre' },
+  ];
 
   const form = reactive<ContactForm>({
     name: '',
     email: '',
     phone: '',
-    subject: 'Gestion Privée',
+    subject: 'gestion-privee',
     message: '',
     consent: false,
   });
 
-  const heroReady = ref(false);
+  const heroReady = useHeroReady();
   const formVisible = useReveal(useTemplateRef('formRef'));
   const mapVisible = useReveal(useTemplateRef('mapRef'));
 
-  onMounted(() => setTimeout(() => (heroReady.value = true), 80));
-
-  useHead({
+  useSeoMeta({
     title: 'Contact — AMS Patrimoine',
-    meta: [
-      {
-        name: 'description',
-        content:
-          'Un accompagnement sur mesure commence par une écoute attentive. Rencontrons-nous pour définir vos objectifs de demain.',
-      },
-    ],
+    description:
+      'Un accompagnement sur mesure commence par une écoute attentive. Rencontrons-nous pour définir vos objectifs de demain.',
   });
 </script>
 
 <template>
-  <div class="bg-[#fafaf4] text-[#1a1c19]">
+  <div class="bg-sand-100 text-sand-900">
     <!-- ─── Hero Header ─── -->
     <section class="container mx-auto px-6 pt-36 pb-20 md:px-12">
       <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
         <div class="max-w-3xl">
           <span
-            class="mb-4 block font-sans text-xs font-semibold tracking-[0.2em] text-[#6d5d33] uppercase transition-all duration-700 ease-out"
+            class="text-gold-500 mb-4 block font-sans text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-700 ease-out"
             :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'"
           >
             Entrer en relation
           </span>
           <h1
-            class="font-serif text-5xl leading-tight font-bold tracking-tight text-[#081a3e] transition-all duration-700 ease-out md:text-7xl"
+            class="text-navy-500 font-serif text-5xl leading-tight font-bold tracking-tight transition-all duration-700 ease-out md:text-7xl"
             style="transition-delay: 150ms"
             :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'"
           >
@@ -63,7 +67,7 @@
           style="transition-delay: 300ms"
           :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'"
         >
-          <p class="max-w-sm leading-relaxed text-[#45464e]">
+          <p class="text-sand-700 max-w-sm leading-relaxed">
             Un accompagnement sur mesure commence par une écoute attentive. Rencontrons-nous pour définir vos objectifs
             de demain.
           </p>
@@ -79,7 +83,7 @@
         :class="formVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
       >
         <div class="group relative">
-          <div class="aspect-[4/5] overflow-hidden rounded-sm">
+          <div class="aspect-4/5 overflow-hidden rounded-sm">
             <NuxtImg
               src="/images/contact/office.jpg"
               alt="Bureau exécutif minimaliste — AMS Patrimoine"
@@ -87,9 +91,9 @@
               loading="lazy"
             />
           </div>
-          <div class="absolute -right-10 -bottom-10 hidden border-l-4 border-[#6d5d33] bg-white p-10 lg:block">
-            <h3 class="mb-2 font-serif text-2xl font-bold text-[#081a3e]">Disponibilité</h3>
-            <p class="text-sm leading-loose text-[#45464e]">
+          <div class="border-gold-500 absolute -right-10 -bottom-10 hidden border-l-4 bg-white p-10 lg:block">
+            <h3 class="text-navy-500 mb-2 font-serif text-2xl font-bold">Disponibilité</h3>
+            <p class="text-sand-700 text-sm leading-loose">
               Du Lundi au Vendredi<br />
               09:00 — 19:00<br />
               Uniquement sur rendez-vous
@@ -99,24 +103,24 @@
 
         <div class="space-y-8 pt-8">
           <div>
-            <p class="mb-3 font-sans text-[10px] tracking-widest text-[#75777f] uppercase">Email Direct</p>
+            <p class="text-sand-600 mb-3 font-sans text-[10px] tracking-widest uppercase">Email Direct</p>
             <a
               href="mailto:contact@amspatrimoine.fr"
-              class="font-serif text-2xl text-[#081a3e] transition-colors duration-300 hover:text-[#6d5d33]"
+              class="text-navy-500 hover:text-gold-500 font-serif text-2xl transition-colors duration-300"
             >
               contact@amspatrimoine.fr
             </a>
           </div>
           <div class="grid grid-cols-2 gap-8">
             <div>
-              <p class="mb-3 font-sans text-[10px] tracking-widest text-[#75777f] uppercase">Confidentialité</p>
-              <p class="text-sm leading-relaxed text-[#45464e]">
+              <p class="text-sand-600 mb-3 font-sans text-[10px] tracking-widest uppercase">Confidentialité</p>
+              <p class="text-sand-700 text-sm leading-relaxed">
                 Vos données sont traitées avec la plus haute rigueur déontologique.
               </p>
             </div>
             <div>
-              <p class="mb-3 font-sans text-[10px] tracking-widest text-[#75777f] uppercase">Expertise</p>
-              <p class="text-sm leading-relaxed text-[#45464e]">Réponse personnalisée sous 48 heures ouvrées.</p>
+              <p class="text-sand-600 mb-3 font-sans text-[10px] tracking-widest uppercase">Expertise</p>
+              <p class="text-sand-700 text-sm leading-relaxed">Réponse personnalisée sous 48 heures ouvrées.</p>
             </div>
           </div>
         </div>
@@ -124,100 +128,75 @@
 
       <!-- Form -->
       <div
-        class="rounded-sm bg-[#f4f4ef] p-8 transition-all duration-700 ease-out md:p-16 lg:col-span-7"
+        class="bg-sand-200 rounded-sm p-8 transition-all duration-700 ease-out md:p-16 lg:col-span-7"
         style="transition-delay: 200ms"
         :class="formVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
       >
-        <form class="space-y-10" @submit.prevent>
+        <UForm :state="form" class="space-y-10" @submit="() => {}">
           <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
-            <div>
-              <label class="mb-2 block font-sans text-[10px] tracking-widest text-[#45464e] uppercase">
-                Nom Complet
-              </label>
-              <input
+            <UFormField name="name" label="Nom Complet">
+              <UInput
                 v-model="form.name"
-                type="text"
                 placeholder="Jean-Baptiste Lully"
-                class="w-full border-b border-[#c5c6cf]/30 bg-transparent px-0 py-3 font-sans text-[#000000] placeholder-[#c5c6cf]/50 transition-colors focus:border-[#6d5d33] focus:outline-none"
+                variant="none"
+                class="border-sand-500/30 focus-within:border-gold-500 w-full border-b"
               />
-            </div>
-            <div>
-              <label class="mb-2 block font-sans text-[10px] tracking-widest text-[#45464e] uppercase"> Email </label>
-              <input
+            </UFormField>
+            <UFormField name="email" label="Email">
+              <UInput
                 v-model="form.email"
                 type="email"
                 placeholder="lully@patrimoine.fr"
-                class="w-full border-b border-[#c5c6cf]/30 bg-transparent px-0 py-3 font-sans text-[#000000] placeholder-[#c5c6cf]/50 transition-colors focus:border-[#6d5d33] focus:outline-none"
+                variant="none"
+                class="border-sand-500/30 focus-within:border-gold-500 w-full border-b"
               />
-            </div>
+            </UFormField>
           </div>
 
           <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
-            <div>
-              <label class="mb-2 block font-sans text-[10px] tracking-widest text-[#45464e] uppercase">
-                Téléphone
-              </label>
-              <input
+            <UFormField name="phone" label="Téléphone">
+              <UInput
                 v-model="form.phone"
                 type="tel"
                 placeholder="+33 0 00 00 00 00"
-                class="w-full border-b border-[#c5c6cf]/30 bg-transparent px-0 py-3 font-sans text-[#000000] placeholder-[#c5c6cf]/50 transition-colors focus:border-[#6d5d33] focus:outline-none"
+                variant="none"
+                class="border-sand-500/30 focus-within:border-gold-500 w-full border-b"
               />
-            </div>
-            <div>
-              <label class="mb-2 block font-sans text-[10px] tracking-widest text-[#45464e] uppercase"> Objet </label>
-              <select
+            </UFormField>
+            <UFormField name="subject" label="Objet">
+              <USelect
                 v-model="form.subject"
-                class="w-full border-b border-[#c5c6cf]/30 bg-transparent px-0 py-3 font-sans text-[#000000] transition-colors focus:border-[#6d5d33] focus:outline-none"
-              >
-                <option v-for="s in subjects" :key="s" :value="s">{{ s }}</option>
-              </select>
-            </div>
+                :items="subjectItems"
+                variant="none"
+                class="border-sand-500/30 focus-within:border-gold-500 w-full border-b"
+              />
+            </UFormField>
           </div>
 
-          <div>
-            <label class="mb-2 block font-sans text-[10px] tracking-widest text-[#45464e] uppercase">
-              Votre Message
-            </label>
-            <textarea
+          <UFormField name="message" label="Votre Message">
+            <UTextarea
               v-model="form.message"
-              rows="4"
+              :rows="4"
               placeholder="Décrivez brièvement votre situation..."
-              class="w-full resize-none border-b border-[#c5c6cf]/30 bg-transparent px-0 py-3 font-sans text-[#000000] placeholder-[#c5c6cf]/50 transition-colors focus:border-[#6d5d33] focus:outline-none"
-            ></textarea>
-          </div>
-
-          <div class="flex items-start gap-4">
-            <input
-              id="consent"
-              v-model="form.consent"
-              type="checkbox"
-              class="mt-1 rounded-none border-[#c5c6cf] text-[#081a3e] focus:ring-[#6d5d33]"
+              variant="none"
+              class="border-sand-500/30 focus-within:border-gold-500 w-full border-b"
             />
-            <label for="consent" class="text-xs leading-relaxed text-[#45464e]">
-              J'accepte que les informations saisies soient utilisées pour permettre de me recontacter dans le cadre de
-              ma demande.
-            </label>
-          </div>
+          </UFormField>
+
+          <UCheckbox
+            v-model="form.consent"
+            label="J'accepte que les informations saisies soient utilisées pour permettre de me recontacter dans le cadre de ma demande."
+          />
 
           <div class="pt-6">
-            <button
-              type="submit"
-              class="group flex items-center gap-4 rounded-sm bg-[#081a3e] px-10 py-5 transition-opacity hover:opacity-90"
-            >
-              <span class="font-sans text-xs tracking-widest text-white uppercase">Envoyer la demande</span>
-              <UIcon
-                name="i-lucide-arrow-right"
-                class="text-sm text-white transition-transform group-hover:translate-x-1"
-              />
-            </button>
+            <UButton type="submit" label="Envoyer la demande" trailing-icon="i-lucide-arrow-right" size="xl" />
           </div>
-        </form>
+        </UForm>
       </div>
     </section>
 
     <!-- ─── Location Section ─── -->
-    <section ref="mapRef" class="relative h-[500px] w-full overflow-hidden bg-[#e8e8e3]">
+    <section ref="mapRef" class="bg-sand-300 relative h-125 w-full overflow-hidden">
       <div class="absolute inset-0 opacity-60" style="filter: grayscale(100%)">
         <NuxtImg
           src="/images/contact/map-bg.jpg"
@@ -229,21 +208,21 @@
 
       <div class="absolute inset-0 flex items-center justify-center">
         <div
-          class="max-w-md border border-white/20 bg-[#fafaf4]/90 p-12 text-center shadow-2xl backdrop-blur-md transition-all duration-700 ease-out"
+          class="bg-sand-100/90 max-w-md border border-white/20 p-12 text-center shadow-2xl backdrop-blur-md transition-all duration-700 ease-out"
           :class="mapVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
         >
-          <UIcon name="i-lucide-map-pin" class="mb-4 text-4xl text-[#6d5d33]" />
-          <h3 class="mb-4 font-serif text-2xl font-bold text-[#1a1c19]">Un Cabinet à votre écoute</h3>
-          <p class="mb-6 text-sm leading-relaxed text-[#45464e]">
+          <UIcon name="i-lucide-map-pin" class="text-gold-500 mb-4 text-4xl" />
+          <h3 class="text-sand-900 mb-4 font-serif text-2xl font-bold">Un Cabinet à votre écoute</h3>
+          <p class="text-sand-700 mb-6 text-sm leading-relaxed">
             Nous vous recevons au sein de nos bureaux confidentiels pour une étude approfondie de votre situation.
           </p>
-          <NuxtLink
+          <UButton
+            label="Prendre rendez-vous"
             to="/contact"
-            class="inline-flex items-center gap-2 font-sans text-xs font-semibold tracking-widest text-[#000000] uppercase"
-          >
-            Prendre rendez-vous
-            <UIcon name="i-lucide-external-link" class="text-xs" />
-          </NuxtLink>
+            variant="link"
+            color="neutral"
+            trailing-icon="i-lucide-external-link"
+          />
         </div>
       </div>
     </section>

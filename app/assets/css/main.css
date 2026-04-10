@@ -1,68 +1,55 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
+@theme static {
+  /* ── Navy — Deep blue primary (AMS Patrimoine #081a3e) ────────── */
+  --color-navy-50: #eef2ff;
+  --color-navy-100: #dae2ff;
+  --color-navy-200: #b7c5f4;
+  --color-navy-300: #7483ad;
+  --color-navy-400: #4f5d86;
+  --color-navy-500: #081a3e;
+  --color-navy-600: #061530;
+  --color-navy-700: #041024;
+  --color-navy-800: #020b18;
+  --color-navy-900: #01060e;
+  --color-navy-950: #000206;
+
+  /* ── Gold — Warm accent (AMS Patrimoine #6d5d33) ──────────────── */
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #f7e0ac;
+  --color-gold-200: #f4dea9;
+  --color-gold-300: #dac492;
+  --color-gold-400: #857342;
+  --color-gold-500: #6d5d33;
+  --color-gold-600: #54451e;
+  --color-gold-700: #3d3215;
+  --color-gold-800: #2b2318;
+  --color-gold-900: #1a1200;
+  --color-gold-950: #0d0900;
+
+  /* ── Sand — Warm neutrals for surfaces ────────────────────────── */
+  --color-sand-50: #ffffff;
+  --color-sand-100: #fafaf4;
+  --color-sand-200: #f4f4ef;
+  --color-sand-300: #eeeee9;
+  --color-sand-400: #e3e3de;
+  --color-sand-500: #c5c6cf;
+  --color-sand-600: #75777f;
+  --color-sand-700: #45464e;
+  --color-sand-800: #2f312e;
+  --color-sand-900: #1a1c19;
+  --color-sand-950: #0d0e0c;
+}
+
 @theme {
-  /* Couleurs personnalisées basées sur le Design System Heritage Private */
-  --color-primary-50: #eef2ff;
-  --color-primary-100: #e0e7ff;
-  --color-primary-200: #c7d2fe;
-  --color-primary-300: #a5b4fc;
-  --color-primary-400: #818cf8;
-  --color-primary-500: #021338; /* Bleu profond officiel AMS Patrimoine */
-  --color-primary-600: #010d29;
-  --color-primary-700: #01081a;
-  --color-primary-800: #00040b;
-  --color-primary-900: #000000;
-
-  /* Couleur d'accent : Beige/Doré Heritage */
-  --color-accent-50: #fdfbf7;
-  --color-accent-100: #f9f5ec;
-  --color-accent-200: #f1e9d1;
-  --color-accent-300: #e7d8ab;
-  --color-accent-400: #d6bc73;
-  --color-accent-500: #a68e5e; /* Or subtil */
-  --color-accent-600: #8a7348;
-  --color-accent-700: #6a5738;
-  --color-accent-800: #4a3d27;
-  --color-accent-900: #2b2318;
-
-  /* Typographies */
+  /* ── Typography ───────────────────────────────────────────────── */
   --font-serif: 'Noto Serif', serif;
   --font-sans: 'Inter', sans-serif;
 }
 
-/* Styles globaux et overrides Nuxt UI */
-@layer base {
-  body {
-    @apply font-sans text-slate-800 bg-white antialiased;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-serif text-primary-500;
-  }
-
-  /* Personnalisation des liens */
-  a {
-    @apply transition-colors duration-300 ease-in-out;
-  }
-}
-
-@layer components {
-  /* Classes utilitaires pour le style Heritage */
-  .text-heritage-gold {
-    color: var(--color-accent-500);
-  }
-
-  .bg-surface-low {
-    background-color: #f4f4ef;
-  }
-
-  .border-heritage {
-    border-color: rgba(166, 142, 94, 0.2);
-  }
+/* ── Nuxt UI overrides ─────────────────────────────────────────── */
+:root {
+  --ui-radius: 0.125rem;
+  --ui-container: 80rem;
 }
