@@ -1,7 +1,9 @@
 <script setup lang="ts">
-  const currentYear = new Date().getFullYear();
+  import type { NavLink } from '~/types/navigation';
 
-  const navigation = [
+  const currentYear: number = new Date().getFullYear();
+
+  const navigation: NavLink[] = [
     { label: 'Accueil', to: '/' },
     { label: 'Expertise', to: '/expertise' },
     { label: "L'Approche", to: '/approche' },
@@ -9,14 +11,14 @@
     { label: 'Contact', to: '/contact' },
   ];
 
-  const expertise = [
+  const expertise: NavLink[] = [
     { label: 'Accompagnement Dirigeants', to: '/expertise/dirigeants' },
     { label: 'Accompagnement Particuliers', to: '/expertise/particuliers' },
     { label: 'Strategie Patrimoniale', to: '/expertise/patrimoine' },
     { label: 'Strategie Financiere', to: '/expertise/finance' },
   ];
 
-  const legal = [
+  const legal: NavLink[] = [
     { label: 'Mentions legales', to: '/mentions-legales' },
     { label: 'Politique de confidentialite', to: '/confidentialite' },
   ];

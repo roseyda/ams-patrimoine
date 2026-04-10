@@ -1,5 +1,7 @@
-<script setup>
-  const navItems = [
+<script setup lang="ts">
+  import type { NavLink } from '~/types/navigation';
+
+  const navItems: NavLink[] = [
     { label: 'Accueil', to: '/' },
     { label: 'Expertise', to: '/expertise' },
     { label: "L'Approche", to: '/approche' },
@@ -21,7 +23,7 @@
       </NuxtLink>
     </template>
 
-    <template #center>
+    <template #default>
       <UNavigationMenu
         :items="navItems"
         variant="link"
