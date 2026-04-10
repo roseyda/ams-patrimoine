@@ -17,8 +17,7 @@
         "Accompagnement spécifique dans la gestion de la trésorerie d'entreprise, l'optimisation de la rémunération et la transmission de l'outil professionnel.",
       ctaLabel: 'Découvrir le conseil aux dirigeants',
       to: '/expertise/dirigeants',
-      image:
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuD6PN3eiZMThr1mr2GySQ9QFrAf-wDKBoSSFDjU8DpIMuhV6UUJOSPec1pWpbfPycMjimq6N3wYCkeFndS4qAjFT_zfpgpUO1WxUKamWEa2M5CXeb9i9fPHI09ghN1Ra1qmn7i2a22xIBVhBrt9XEvle95WSg2UNSpY8M7TUBXRKEvlGDZkygEmvlnIaSf3OqGWlX34MLtgzUTiCqvqTIGEOJiDFwgPI5ClWR9_-RWnBQjB9OkWgyziSWAWsLHRBXZJQRpwSlaQ8Bb5',
+      image: '/images/expertise/dirigeants.jpg',
       imageAlt: "Façade en verre minimaliste d'un gratte-ciel — Pôle Business",
     },
     {
@@ -28,8 +27,7 @@
         "Protection de la famille, préparation de la retraite et structuration d'actifs immobiliers pour bâtir un héritage solide et pérenne.",
       ctaLabel: "Voir l'offre particuliers",
       to: '/expertise/particuliers',
-      image:
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuDWOfUGlGGML9mYZb67p1uJ4sKlG5uTPnClhrE3_bT4FUZWeIfuk9Tvf2zhCdeJytkKAr-pEkJ0hS2lesqU1_4Mp4QsdvLERAygS6CCUT19mO5hesnc-jPVurUnF5vSb0lE8uH0CWJm2Pl3wl5ttT72YixO9aEilaz0IK-Gtnzwx4NOp9iwy5cBHN7NqjMXcStMOQosl-fq1O7cd118vhFeiW0aVLXRvAEZnqqnXlASgE1Z8ALd8_tQpRS-kjmLMeBB0eN9z7-h7OHT',
+      image: '/images/expertise/particuliers.jpg',
       imageAlt: "Intérieur d'une bibliothèque de luxe avec lumière naturelle — Pôle Privé",
     },
     {
@@ -39,8 +37,7 @@
         'Audit global et ingénierie juridique. Nous créons le cadre structurel nécessaire à la valorisation et à la sécurité de vos actifs.',
       ctaLabel: "Explorer l'ingénierie",
       to: '/expertise/patrimoine',
-      image:
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuAedQORwMTeRMJT2Ycli7b-dWrFGJojU-KwGHDsDzLghRHmmeQFDxCu8-hcYGs3ZkLlUMzB_TmDNFk5ep3XC_cnMjS9m-9aJveKg6Na51m_nLB0AXqgqt6DN8Q9JuRsFvQASAe78Hge3ip8jVOU2TTTjnCoQTRj-TsNF4tYgV1gv9ALdkGjjHtD7lg_GlRbHF6QzTeIak-i2i4UIDQnOLTSGj2sZpLuFoaxZGQ-1RHADzbTzofO-kB626_a74HpYk-OURalap_CTES1',
+      image: '/images/expertise/patrimoine.jpg',
       imageAlt: 'Stylo plume et plan architectural — Ingénierie Patrimoniale',
     },
     {
@@ -50,8 +47,7 @@
         "Allocation d'actifs en architecture ouverte. Accès aux meilleurs gérants mondiaux et solutions de placement privées exclusives.",
       ctaLabel: 'Découvrir nos solutions',
       to: '/expertise/finance',
-      image:
-        'https://lh3.googleusercontent.com/aida-public/AB6AXuAjuuJTm2AUtMVBC9OlC0v2RGRLmbv6nW-LAxa5V7zYGjTeajRM5RaLR4oJNsORoDWS_By7kCGSaOHLWEaccRhR7WagOe3q851IJjvW4V-fQ9ZH7gomSlanBrRvuJmNqIJj5sIa8TGVh5EuBmylqBpjO8ZjR1Zfq4H3aunnreMlG6q7tZcBMjPxcWbT1BQ3WEaP7HPcm1PDqogsrq8S0pWtfEObTHtd1wLg_6w4irbdRN4JJ-UTjIoMEqp-uui1blb8b9fwEgps0mwS',
+      image: '/images/expertise/finance.jpg',
       imageAlt: 'Lignes architecturales abstraites en tons monochromatiques — Stratégie Financière',
     },
   ];
@@ -101,11 +97,11 @@
             class="group relative overflow-hidden rounded-sm bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl"
           >
             <!-- Card image -->
-            <div class="aspect-[16/10] overflow-hidden">
+            <div class="aspect-16/10 overflow-hidden">
               <NuxtImg
                 :src="card.image"
                 :alt="card.imageAlt"
-                class="h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
+                class="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
                 loading="lazy"
               />
             </div>
@@ -148,7 +144,7 @@
           <!-- Image -->
           <div class="lg:col-span-7">
             <NuxtImg
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3bJTVRop_NPnnWvWQBLbfmIfGU8rsLN-9R4pnsrcrUAjKKzyTXBITiZgtEMPUjhLLhuS8EuVsb9vLw04EPmbpKb5aNBu0QVhhclrLiJeuodXVkIt57pspFZ2SEvFobAKnkUsehClC7srjrMqOOEBrB1b-QP_He4rkX-10jewAWIniVbfHmI5o4ZFg3LXZEiwuOFOD7BVFWO6oNXBCiiqTme_xDAZwO3Z7qj8HWXVtOc-Lr4Q9HoGFa2Dfe7T8IW36CqBRUtypzwQc"
+              src="/images/expertise/quote-portrait.jpg"
               alt="Expert AMS Patrimoine — soin du détail"
               class="h-[600px] w-full rounded-sm object-cover grayscale"
               loading="lazy"
