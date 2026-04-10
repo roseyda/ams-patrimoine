@@ -54,6 +54,12 @@
   --ui-container: 80rem;
 }
 
+/* ── Form placeholder contrast fix ─────────────────────────────── */
+::placeholder {
+  color: var(--color-sand-500);
+  opacity: 1;
+}
+
 /* ── Page transition: fade + blur ──────────────────────────────── */
 .page-enter-active,
 .page-leave-active {
