@@ -99,7 +99,7 @@
         <p class="text-xs text-white/40">&copy; {{ currentYear }} AMS Patrimoine. Tous droits reserves.</p>
         <div class="flex items-center gap-5">
           <NuxtLink
-            v-for="{label, to} in legal"
+            v-for="{ label, to } in legal"
             :key="to"
             :to
             class="text-xs text-white/40 transition-colors duration-300 hover:text-white/70"

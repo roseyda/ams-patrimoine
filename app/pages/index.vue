@@ -77,7 +77,7 @@
       <div class="container mx-auto grid grid-cols-1 items-stretch gap-0 px-6 md:grid-cols-12 md:px-12">
         <!-- Text Content -->
         <div class="z-10 flex flex-col justify-center py-20 pr-0 md:col-span-7 md:pr-12">
-          <span class="mb-6 block font-sans text-sm font-semibold uppercase tracking-widest text-[#6d5d33]">
+          <span class="mb-6 block font-sans text-sm font-semibold tracking-widest text-[#6d5d33] uppercase">
             Cabinet de Conseil en Gestion de Patrimoine
           </span>
           <h1
@@ -121,13 +121,11 @@
             />
           </div>
           <!-- Overlapping Quote Card -->
-          <div
-            class="absolute -left-20 bottom-10 z-20 max-w-xs border-l-4 border-[#6d5d33] bg-white p-8 shadow-xl"
-          >
+          <div class="absolute bottom-10 -left-20 z-20 max-w-xs border-l-4 border-[#6d5d33] bg-white p-8 shadow-xl">
             <p class="font-serif text-xl leading-snug text-[#081a3e]">
               "Chaque patrimoine raconte une histoire unique qui mérite une stratégie sur-mesure."
             </p>
-            <p class="mt-4 font-sans text-xs font-bold uppercase tracking-widest text-[#6d5d33]">
+            <p class="mt-4 font-sans text-xs font-bold tracking-widest text-[#6d5d33] uppercase">
               Marie-Sophie LECLUYSE
             </p>
           </div>
@@ -158,12 +156,10 @@
               <UIcon :name="card.icon" class="mb-8 text-4xl text-[#6d5d33]" />
               <h3 class="mb-4 font-serif text-2xl text-[#081a3e]">{{ card.title }}</h3>
               <p class="grow leading-relaxed text-[#45464e]">{{ card.description }}</p>
-              <div
-                class="mt-8 border-t border-[#c5c6cf]/20 pt-8 transition-colors group-hover:border-[#6d5d33]/50"
-              >
+              <div class="mt-8 border-t border-[#c5c6cf]/20 pt-8 transition-colors group-hover:border-[#6d5d33]/50">
                 <NuxtLink
                   :to="card.to"
-                  class="inline-flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-widest text-[#6d5d33]"
+                  class="inline-flex items-center gap-2 font-sans text-sm font-semibold tracking-widest text-[#6d5d33] uppercase"
                 >
                   En savoir plus
                   <UIcon name="i-lucide-chevron-right" class="text-xs" />
@@ -176,8 +172,8 @@
     </section>
 
     <!-- ─── DNA Section : The Ledger Look ─── -->
-    <section class="py-32 bg-[#fafaf4]">
-      <div class="container mx-auto grid grid-cols-1 items-center gap-20 px-6 lg:grid-cols-2 md:px-12">
+    <section class="bg-[#fafaf4] py-32">
+      <div class="container mx-auto grid grid-cols-1 items-center gap-20 px-6 md:px-12 lg:grid-cols-2">
         <!-- Image -->
         <div class="relative order-2 lg:order-1">
           <div class="aspect-square overflow-hidden bg-[#f4f4ef]">
@@ -187,15 +183,15 @@
               class="h-full w-full object-cover opacity-80 mix-blend-multiply"
             />
           </div>
-          <div class="absolute -bottom-10 -right-10 hidden bg-[#081a3e] p-12 text-white md:block">
+          <div class="absolute -right-10 -bottom-10 hidden bg-[#081a3e] p-12 text-white md:block">
             <div class="mb-2 font-serif text-4xl italic">15+</div>
-            <div class="text-xs uppercase tracking-[0.2em] opacity-70">Années d'Expertise</div>
+            <div class="text-xs tracking-[0.2em] uppercase opacity-70">Années d'Expertise</div>
           </div>
         </div>
 
         <!-- Text -->
         <div class="order-1 lg:order-2">
-          <span class="mb-6 block font-sans text-sm font-semibold uppercase tracking-widest text-[#6d5d33]">
+          <span class="mb-6 block font-sans text-sm font-semibold tracking-widest text-[#6d5d33] uppercase">
             L'ADN du Cabinet
           </span>
           <h2
@@ -218,24 +214,24 @@
     </section>
 
     <!-- ─── Trust Section ─── -->
-    <section class="py-32" style="background-color: rgba(232,232,227,0.3)">
+    <section class="py-32" style="background-color: rgba(232, 232, 227, 0.3)">
       <div class="container mx-auto max-w-4xl px-6 text-center md:px-12">
         <h2 class="mb-12 font-serif text-4xl text-[#081a3e] md:text-5xl" style="letter-spacing: -0.02em">
           La Confiance se mérite
         </h2>
-        <p class="mb-16 font-serif text-xl italic leading-relaxed text-[#45464e]">
-          "Notre métier n'est pas seulement financier ; il est avant tout humain. Nous protégeons ce que nos clients
-          ont mis une vie à bâtir."
+        <p class="mb-16 font-serif text-xl leading-relaxed text-[#45464e] italic">
+          "Notre métier n'est pas seulement financier ; il est avant tout humain. Nous protégeons ce que nos clients ont
+          mis une vie à bâtir."
         </p>
         <div class="grid grid-cols-2 items-center gap-12 opacity-60 md:grid-cols-4">
           <div v-for="badge in trustBadges" :key="badge.label" class="flex flex-col items-center gap-2">
             <div
               class="mb-4 flex h-16 w-16 items-center justify-center rounded-full"
-              style="background-color: rgba(197,198,207,0.3)"
+              style="background-color: rgba(197, 198, 207, 0.3)"
             >
               <UIcon :name="badge.icon" class="text-[#081a3e]" />
             </div>
-            <p class="text-[10px] font-bold uppercase tracking-widest">{{ badge.label }}</p>
+            <p class="text-[10px] font-bold tracking-widest uppercase">{{ badge.label }}</p>
           </div>
         </div>
       </div>
@@ -244,11 +240,12 @@
     <!-- ─── CTA Section ─── -->
     <section class="relative overflow-hidden bg-[#081a3e] py-32">
       <div class="absolute inset-0 opacity-10">
-        <div class="absolute right-0 top-0 h-full w-1/2 bg-linear-to-l from-white to-transparent"></div>
+        <div class="absolute top-0 right-0 h-full w-1/2 bg-linear-to-l from-white to-transparent"></div>
       </div>
-      <div class="container relative z-10 mx-auto px-6 text-center md:px-12">
+      <div class="relative z-10 container mx-auto px-6 text-center md:px-12">
         <h2 class="mb-10 font-serif text-4xl leading-tight text-white md:text-6xl" style="letter-spacing: -0.02em">
-          Prêt à valoriser <br /> votre patrimoine ?
+          Prêt à valoriser <br />
+          votre patrimoine ?
         </h2>
         <NuxtLink
           to="/contact"
