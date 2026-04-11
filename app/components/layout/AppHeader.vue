@@ -40,7 +40,7 @@
   >
     <template #left>
       <NuxtLink to="/">
-        <LayoutAppLogo />
+        <NuxtImg src="/images/logo/LOGO-noir-2-2048x910.png" height="60" alt="AMS Patrimoine" />
       </NuxtLink>
     </template>
 
