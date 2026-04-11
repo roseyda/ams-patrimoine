@@ -43,7 +43,6 @@
       title: "L'Audit Patrimonial",
       description:
         'Une analyse exhaustive de votre situation actuelle. Nous identifions les forces, les vulnérabilités et le potentiel inexploité de vos actifs pour définir une base solide.',
-      reversed: false,
       image: '/images/approche/planning.jpg',
       imageAlt: 'Documents de planification stratégique sur un bureau',
     },
@@ -52,7 +51,6 @@
       title: 'Conception',
       description:
         'Élaboration de votre stratégie cible. Nous dessinons les plans de votre futur patrimoine en intégrant fiscalité, transmission et performance.',
-      reversed: true,
       quote: "L'architecture de votre avenir financier se dessine aujourd'hui avec une vision à 360°.",
     },
     {
@@ -60,7 +58,6 @@
       title: 'Édification',
       description:
         'Mise en œuvre opérationnelle des solutions sélectionnées. Nous coordonnons les experts pour bâtir votre structure avec une précision millimétrée.',
-      reversed: false,
       image: '/images/approche/interior.jpg',
       imageAlt: 'Détails architecturaux sophistiqués',
       tags: ['Actifs', 'Juridique', 'Fiscalité'],
@@ -70,12 +67,11 @@
       title: 'Veille Active',
       description:
         'Le patrimoine est vivant. Nous assurons un suivi constant pour ajuster votre stratégie aux évolutions législatives et aux opportunités de marché.',
-      reversed: true,
       image: '/images/approche/growth.jpg',
       imageAlt: 'Reflets sur façade en verre représentant la croissance',
       ctaLabel: 'Accompagnement continu',
     },
-  ];
+  ].map((item, index) => ({ ...item, reversed: index % 2 != 0 }));
 
   const stats: StatItem[] = [
     { value: '100%', label: 'Sur-Mesure' },
@@ -226,7 +222,7 @@
             <div
               v-for="(step, i) in timelineSteps"
               :key="step.number"
-              class="relative flex flex-col items-center transition-all duration-700 ease-out md:items-start"
+              class="group relative flex flex-col items-center transition-all duration-700 ease-out md:items-start"
               :class="[
                 step.reversed ? 'md:flex-row-reverse' : 'md:flex-row',
                 timelineVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0',
@@ -292,13 +288,13 @@
                 <!-- Image variant -->
                 <div
                   v-if="step.image"
-                  class="bg-sand-200 aspect-video overflow-hidden rounded-sm shadow-sm transition-all duration-700 group-hover:grayscale-0"
+                  class="bg-sand-200 aspect-video overflow-hidden rounded-sm shadow-sm"
                   :class="step.tags ? 'border-sand-500/10 border' : ''"
                 >
                   <NuxtImg
                     :src="step.image"
                     :alt="step.imageAlt ?? step.title"
-                    class="h-full w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
+                    class="h-full w-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
                     loading="lazy"
                   />
                 </div>
