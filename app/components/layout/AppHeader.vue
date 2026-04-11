@@ -1,34 +1,19 @@
 <script setup lang="ts">
   import type { NavigationMenuItem } from '@nuxt/ui';
 
-  const navItems: NavigationMenuItem[] = [
+  const route = useRoute();
+
+  const navItems = computed<NavigationMenuItem[]>(() => [
     { label: 'Accueil', to: '/' },
     {
       label: 'Expertise',
       to: '/expertise',
-      children: [
-        {
-          label: 'Dirigeants',
-          to: '/expertise/dirigeants',
-        },
-        {
-          label: 'Particuliers',
-          to: '/expertise/particuliers',
-        },
-        {
-          label: 'Stratégie Patrimoniale',
-          to: '/expertise/patrimoine',
-        },
-        {
-          label: 'Investissement',
-          to: '/expertise/finance',
-        },
-      ],
+      active: route.path.includes('expertise'),
     },
     { label: "L'Approche", to: '/approche' },
     { label: 'Le Cabinet', to: '/cabinet' },
     { label: 'Contact', to: '/contact' },
-  ];
+  ]);
 </script>
 
 <template>
@@ -61,7 +46,7 @@
         label="Prendre rendez-vous"
         to="/contact"
         size="sm"
-        class="hidden rounded-sm sm:inline-flex"
+        class="hidden rounded-sm lg:inline-flex"
         :ui="{
           base: 'bg-gradient-to-r from-primary-500 to-navy-500 hover:from-navy-500 hover:to-primary-500 text-white border-0',
         }"
