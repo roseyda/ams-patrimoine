@@ -4,7 +4,9 @@
  * before triggering the hero entrance animation.
  */
 export function useHeroReady(): Readonly<Ref<boolean>> {
-  const ready = ref(false);
-  onMounted(() => setTimeout(() => (ready.value = true), 80));
+  const { ready, start } = useTimeout(80, { controls: true });
+
+  onMounted(() => start());
+
   return readonly(ready);
 }
