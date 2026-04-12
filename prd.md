@@ -49,4 +49,4 @@
 
 - **Responsive** : Utiliser les classes Tailwind `hidden md:flex` pour le header et l'adaptation des grilles.
 - **Animations** : Suggestions de `framer-motion` (via `v-motion`) pour les apparitions au scroll, notamment sur la timeline de la page Approche.
-- **Images** : Optimisation via `NuxtImg` pour les portraits et visuels d'architecture.
+- **Images** : Optimisation via `NuxtPicture` pour les portraits et visuels d'architecture.

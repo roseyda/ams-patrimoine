@@ -84,11 +84,12 @@
       >
         <div class="group relative">
           <div class="aspect-4/5 overflow-hidden rounded-sm">
-            <NuxtImg
+            <NuxtPicture
               src="/images/contact/office.jpg"
               alt="Bureau exécutif minimaliste — AMS Patrimoine"
-              class="h-full w-full object-cover grayscale transition-transform duration-700 group-hover:scale-105"
-              loading="lazy"
+              :img-attrs="{
+                class: 'h-full w-full object-cover grayscale transition-transform duration-700 group-hover:scale-105',
+              }"
             />
           </div>
           <div class="border-gold-500 absolute -right-10 -bottom-10 hidden border-l-4 bg-white p-10 lg:block">
@@ -198,11 +199,11 @@
     <!-- ─── Location Section ─── -->
     <section ref="mapRef" class="bg-sand-300 relative h-125 w-full overflow-hidden">
       <div class="absolute inset-0 opacity-60" style="filter: grayscale(100%)">
-        <NuxtImg
+        <NuxtPicture
           src="/images/contact/map-bg.jpg"
           alt="Façade de verre — Cabinet AMS Patrimoine"
-          class="h-full w-full object-cover"
           loading="lazy"
+          :img-attrs="{ class: 'h-full w-full object-cover' }"
         />
       </div>
 

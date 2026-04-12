@@ -81,10 +81,10 @@
           :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
         >
           <div class="h-150 w-full overflow-hidden rounded-sm shadow-2xl">
-            <NuxtImg
+            <NuxtPicture
               src="/images/cabinet/building.jpg"
               alt="Immeuble en verre — AMS Patrimoine"
-              class="h-full w-full object-cover"
+              :img-attrs="{ class: 'h-full w-full object-cover' }"
             />
           </div>
           <div class="absolute -bottom-10 -left-10 max-w-sm rounded-sm bg-white p-10 shadow-xl md:-left-20">
@@ -136,11 +136,13 @@
           :class="portraitVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'"
         >
           <div class="relative z-10 mx-auto aspect-4/5 w-full max-w-md">
-            <NuxtImg
+            <NuxtPicture
               src="/images/cabinet/portrait.jpg"
               alt="Portrait de Marie-Sophie LECLUYSE — Fondatrice AMS Patrimoine"
-              class="h-full w-full rounded-sm object-cover grayscale transition-all duration-700 hover:grayscale-0"
               loading="lazy"
+              :img-attrs="{
+                class: 'h-full w-full rounded-sm object-cover grayscale transition-all duration-700 hover:grayscale-0',
+              }"
             />
           </div>
           <div class="bg-sand-300 absolute -top-10 -right-10 -z-10 h-full w-full rounded-sm"></div>

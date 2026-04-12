@@ -49,11 +49,13 @@
     <!-- ─── Hero ─── -->
     <section class="relative flex min-h-[85vh] items-center overflow-hidden">
       <div class="absolute inset-0 z-0">
-        <NuxtImg
+        <NuxtPicture
           src="/images/particuliers/hero-bg.jpg"
           alt="Intérieur architectural minimaliste — Pôle Privé Particuliers"
-          class="h-full w-full object-cover brightness-90"
-          style="filter: grayscale(20%)"
+          :img-attrs="{
+            class: 'h-full w-full object-cover brightness-90',
+            style: 'filter: grayscale(20%)',
+          }"
         />
       </div>
 
@@ -131,12 +133,14 @@
           :class="transmissionVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'"
         >
           <div class="aspect-4/5 overflow-hidden rounded-sm">
-            <NuxtImg
+            <NuxtPicture
               src="/images/particuliers/leather-case.jpg"
               alt="Serviette en cuir et stylo plume — transmission patrimoniale"
-              class="h-full w-full object-cover"
-              style="filter: grayscale(40%)"
               loading="lazy"
+              :img-attrs="{
+                class: 'h-full w-full object-cover',
+                style: 'filter: grayscale(40%)',
+              }"
             />
           </div>
           <div class="absolute right-0 -bottom-10 hidden bg-white p-12 shadow-xl md:right-10 md:block">
@@ -201,11 +205,11 @@
 
           <!-- Image panel -->
           <div class="bg-sand-200 hidden md:col-span-1 md:row-span-1 md:block">
-            <NuxtImg
+            <NuxtPicture
               src="/images/cabinet/portrait.jpg"
               alt="Conseil patrimonial haut de gamme"
-              class="h-full w-full object-cover grayscale"
               loading="lazy"
+              :img-attrs="{ class: 'h-full w-full object-cover grayscale' }"
             />
           </div>
 

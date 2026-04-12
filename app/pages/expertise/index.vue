@@ -113,11 +113,14 @@
             >
               <!-- Card image -->
               <div class="aspect-16/10 overflow-hidden">
-                <NuxtImg
+                <NuxtPicture
                   :src="image"
                   :alt="imageAlt"
-                  class="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
                   loading="lazy"
+                  :img-attrs="{
+                    class:
+                      'h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0',
+                  }"
                 />
               </div>
 
@@ -161,11 +164,11 @@
             class="transition-all duration-700 ease-out lg:col-span-7"
             :class="quoteVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'"
           >
-            <NuxtImg
+            <NuxtPicture
               src="/images/expertise/quote-portrait.jpg"
               alt="Expert AMS Patrimoine — soin du détail"
-              class="h-150 w-full rounded-sm object-cover grayscale"
               loading="lazy"
+              :img-attrs="{ class: 'h-150 w-full rounded-sm object-cover grayscale' }"
             />
           </div>
 

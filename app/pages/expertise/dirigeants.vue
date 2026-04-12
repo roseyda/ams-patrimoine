@@ -27,10 +27,10 @@
     <!-- ─── Hero ─── -->
     <section class="bg-sand-100 relative flex min-h-[80vh] items-center overflow-hidden">
       <div class="absolute inset-0 z-0">
-        <NuxtImg
+        <NuxtPicture
           src="/images/dirigeants/hero-bg.jpg"
           alt="Siège social en verre — Pôle Business Dirigeants"
-          class="h-full w-full object-cover opacity-40 grayscale"
+          :img-attrs="{ class: 'h-full w-full object-cover opacity-40 grayscale' }"
         />
         <div class="from-sand-100 via-sand-100/60 absolute inset-0 bg-gradient-to-r to-transparent"></div>
       </div>
@@ -79,10 +79,10 @@
         :class="heroReady ? 'opacity-100' : 'opacity-0'"
         style="transition: opacity 0.8s ease-out 0.6s"
       >
-        <NuxtImg
+        <NuxtPicture
           src="/images/dirigeants/boardroom.jpg"
           alt="Salle de conseil executive — AMS Patrimoine"
-          class="h-full w-full rounded-sm object-cover shadow-2xl"
+          :img-attrs="{ class: 'h-full w-full rounded-sm object-cover shadow-2xl' }"
         />
       </div>
     </section>
@@ -153,11 +153,14 @@
             :class="bentoVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
             style="transition-delay: 400ms"
           >
-            <NuxtImg
+            <NuxtPicture
               src="/images/dirigeants/handshake.jpg"
               alt="Transmission d'entreprise — poignée de main"
-              class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
+              :img-attrs="{
+                class:
+                  'absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105',
+              }"
             />
             <div class="bg-navy-500/60 absolute inset-0 flex flex-col justify-end p-12">
               <h3 class="mb-2 font-serif text-3xl font-bold text-white">Transmission</h3>
@@ -189,11 +192,11 @@
     <!-- ─── CTA ─── -->
     <section ref="ctaRef" class="relative overflow-hidden py-32">
       <div class="absolute inset-0 -z-10">
-        <NuxtImg
+        <NuxtPicture
           src="/images/dirigeants/cta-bg.jpg"
           alt="Dirigeant devant la fenêtre d'un gratte-ciel"
-          class="h-full w-full object-cover"
           loading="lazy"
+          :img-attrs="{ class: 'h-full w-full object-cover' }"
         />
         <div class="bg-navy-500/80 absolute inset-0"></div>
       </div>

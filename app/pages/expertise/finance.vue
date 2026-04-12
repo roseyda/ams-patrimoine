@@ -64,11 +64,11 @@
     <!-- ─── Architectural Blade ─── -->
     <section ref="bladeRef" class="relative mb-48">
       <div class="h-150 w-full overflow-hidden">
-        <NuxtImg
+        <NuxtPicture
           src="/images/finance/atrium.jpg"
           alt="Atrium architectural moderne — Stratégie Financière"
-          class="h-full w-full object-cover"
           loading="lazy"
+          :img-attrs="{ class: 'h-full w-full object-cover' }"
         />
       </div>
 
@@ -186,11 +186,11 @@
         :class="ctaVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
       >
         <div class="absolute inset-0 opacity-20">
-          <NuxtImg
+          <NuxtPicture
             src="/images/finance/gold-pen.jpg"
             alt="Stylo plume en or sur registre financier"
-            class="h-full w-full object-cover"
             loading="lazy"
+            :img-attrs="{ class: 'h-full w-full object-cover' }"
           />
         </div>
         <div class="relative z-10 flex flex-col items-center justify-between gap-10 md:flex-row">

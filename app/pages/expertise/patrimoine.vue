@@ -67,10 +67,10 @@
     <!-- ─── Hero ─── -->
     <section class="relative flex min-h-[80vh] items-center overflow-hidden px-6 py-20 md:px-12">
       <div class="absolute inset-0 z-0">
-        <NuxtImg
+        <NuxtPicture
           src="/images/patrimoine/stone-facade.jpg"
           alt="Façade en pierre avec ombres dramatiques — Stratégie Patrimoniale"
-          class="h-full w-full object-cover opacity-20 grayscale"
+          :img-attrs="{ class: 'h-full w-full object-cover opacity-20 grayscale' }"
         />
         <div class="from-sand-100 via-sand-100/90 absolute inset-0 bg-gradient-to-r to-transparent"></div>
       </div>
@@ -147,11 +147,11 @@
           :class="auditVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'"
         >
           <div class="bg-sand-400 absolute top-0 right-0 h-125 w-11/12 overflow-hidden">
-            <NuxtImg
+            <NuxtPicture
               src="/images/patrimoine/interior.jpg"
               alt="Intérieur minimaliste moderne — architecture de transmission"
-              class="h-full w-full object-cover brightness-90 grayscale"
               loading="lazy"
+              :img-attrs="{ class: 'h-full w-full object-cover brightness-90 grayscale' }"
             />
           </div>
           <div class="absolute bottom-0 left-0 w-3/4 bg-white/90 p-12 shadow-2xl backdrop-blur">

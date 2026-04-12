@@ -141,11 +141,13 @@
         >
           <div class="bg-sand-200 absolute inset-0 z-0 translate-x-12 translate-y-12"></div>
           <div class="relative z-10 h-full w-full overflow-hidden shadow-2xl">
-            <NuxtImg
-              src="/images/portrait-fondatrice.jpg"
+            <NuxtPicture
+              src="/images/portrait.png"
               alt="Marie-Sophie LECLUYSE - Fondatrice AMS Patrimoine"
-              class="absolute inset-0 h-full w-full object-cover"
-              style="filter: grayscale(20%)"
+              :img-attrs="{
+                class: 'absolute inset-0 h-full w-full object-cover',
+                style: 'filter: grayscale(20%)',
+              }"
             />
           </div>
 
@@ -224,11 +226,11 @@
           :class="dnaVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'"
         >
           <div class="bg-sand-200 aspect-square overflow-hidden">
-            <NuxtImg
+            <NuxtPicture
               src="/images/home/bureau.jpg"
               alt="Bureau AMS Patrimoine"
-              class="h-full w-full object-cover opacity-80 mix-blend-multiply"
               loading="lazy"
+              :img-attrs="{ class: 'h-full w-full object-cover opacity-80 mix-blend-multiply' }"
             />
           </div>
           <div class="bg-navy-500 absolute -right-10 -bottom-10 hidden p-12 text-white md:block">

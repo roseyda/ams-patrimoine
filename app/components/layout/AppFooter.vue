@@ -35,7 +35,11 @@
         <!-- Brand column -->
         <div class="lg:col-span-1">
           <div class="mb-6 flex items-center gap-2.5">
-            <NuxtImg src="/images/logo/LOGO-noir-2-2048x910.png" height="60" alt="AMS Patrimoine" class="invert" />
+            <NuxtPicture
+              src="/images/logo/LOGO-noir-2-2048x910.png"
+              :img-attrs="{ class: 'h-[60px] w-auto invert' }"
+              alt="AMS Patrimoine"
+            />
             <span class="font-serif text-lg leading-tight tracking-tight">
               <span class="font-semibold text-white">AMS</span>
               <span class="text-white/70"> Patrimoine</span>

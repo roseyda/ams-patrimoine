@@ -137,10 +137,12 @@
           :class="heroReady ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'"
         >
           <div class="bg-sand-400 relative aspect-4/5 overflow-hidden rounded-sm">
-            <NuxtImg
+            <NuxtPicture
               src="/images/approche/interior.jpg"
               alt="Intérieur architectural minimaliste — AMS Patrimoine"
-              class="h-full w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
+              :img-attrs="{
+                class: 'h-full w-full object-cover grayscale transition-all duration-700 hover:grayscale-0',
+              }"
             />
             <div class="bg-navy-500/10 absolute inset-0 mix-blend-multiply"></div>
           </div>
@@ -291,11 +293,13 @@
                   class="bg-sand-200 aspect-video overflow-hidden rounded-sm shadow-sm"
                   :class="step.tags ? 'border-sand-500/10 border' : ''"
                 >
-                  <NuxtImg
+                  <NuxtPicture
                     :src="step.image"
                     :alt="step.imageAlt ?? step.title"
-                    class="h-full w-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
                     loading="lazy"
+                    :img-attrs="{
+                      class: 'h-full w-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0',
+                    }"
                   />
                 </div>
 
@@ -324,11 +328,11 @@
             :class="signatureVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'"
           >
             <div class="bg-sand-200 aspect-square overflow-hidden rounded-sm">
-              <NuxtImg
+              <NuxtPicture
                 src="/images/approche/gallery.jpg"
                 alt="Espace galerie épuré — AMS Patrimoine"
-                class="h-full w-full object-cover"
                 loading="lazy"
+                :img-attrs="{ class: 'h-full w-full object-cover' }"
               />
             </div>
             <!-- Overlapping card: bottom-right, navy border -->

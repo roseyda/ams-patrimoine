@@ -133,8 +133,8 @@ const props = defineProps<Props>();
 
 # 🖼 IMAGES
 
-- Always use `NuxtImg`
-- Never use `<img>` directly
+- Always use `NuxtPicture` (preferred for automatic format negotiation via `<picture>`/`srcset`)
+- Never use `<img>` or `NuxtImg` directly
 - Always define `alt`
 - Define explicit dimensions when possible
 - Use lazy loading when appropriate
@@ -339,7 +339,7 @@ If detected:
 
 # ⚡ PERFORMANCE RULES
 
-- Use NuxtImg
+- Use NuxtPicture
 - Lazy load heavy components
 - Avoid unnecessary watchers
 - Prefer computed over watch
