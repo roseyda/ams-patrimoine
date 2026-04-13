@@ -21,7 +21,7 @@
     name: undefined,
     email: undefined,
     phone: undefined,
-    subject: 'gestion-privee',
+    subject: ['gestion-privee'],
     message: undefined,
     consent: false,
   };
@@ -192,6 +192,7 @@
               <USelect
                 v-model="state.subject"
                 :items="subjectItems"
+                multiple
                 variant="none"
                 class="border-sand-500/30 focus-within:border-gold-500 w-full border-b"
               />
