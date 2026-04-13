@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import '@nuxt/ui';
+@import "tailwindcss";
+@import "@nuxt/ui";
 
 @theme static {
   /* ── Navy — Deep blue primary (AMS Patrimoine #081a3e) ────────── */
@@ -44,8 +44,8 @@
 
 @theme {
   /* ── Typography ───────────────────────────────────────────────── */
-  --font-serif: 'Noto Serif', serif;
-  --font-sans: 'Inter', sans-serif;
+  --font-serif: "Noto Serif", serif;
+  --font-sans: "Inter", sans-serif;
 }
 
 /* ── Nuxt UI overrides ─────────────────────────────────────────── */
@@ -69,8 +69,8 @@ picture {
 .page-enter-active,
 .page-leave-active {
   transition:
-    opacity 200ms ease-in-out,
-    filter 200ms ease-in-out;
+    opacity 150ms ease-in-out,
+    filter 150ms ease-in-out;
 }
 
 .page-enter-from {
