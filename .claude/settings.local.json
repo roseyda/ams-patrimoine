@@ -35,7 +35,8 @@
       "Bash(grep -n 'text-black\\\\b' app/pages/**/*.vue app/pages/*.vue)",
       "Bash(grep -v ':0$')",
       "Bash(find app/pages -name '*.vue' -exec sed -i '' -e 's/text-black\\\\b/text-navy-500/g' -e s/border-black/border-navy-500/g '{}' +)",
-      "Bash(find app/pages -name '*.vue' -exec perl -pi -e 's/text-black\\(?=[\\\\s\"\\\\/]\\)/text-navy-500/g; s/border-black\\(?=[\\\\s\"\\\\/]\\)/border-navy-500/g' {} +)"
+      "Bash(find app/pages -name '*.vue' -exec perl -pi -e 's/text-black\\(?=[\\\\s\"\\\\/]\\)/text-navy-500/g; s/border-black\\(?=[\\\\s\"\\\\/]\\)/border-navy-500/g' {} +)",
+      "Bash(echo \"---EXIT:$?---\")"
     ]
   }
 }

@@ -1,17 +1,13 @@
 <script setup lang="ts">
-  interface ContactForm {
-    name: string;
-    email: string;
-    phone: string;
-    subject: string;
-    message: string;
-    consent: boolean;
-  }
+  import type { FormSubmitEvent, SelectItem } from '@nuxt/ui';
+  import * as v from 'valibot';
+  import { contactSchema, type ContactSchema } from '~~/shared/schemas/contact';
 
-  interface SelectItem {
-    label: string;
-    value: string;
-  }
+  useSeoMeta({
+    title: 'Contact — AMS Patrimoine',
+    description:
+      'Un accompagnement sur mesure commence par une écoute attentive. Rencontrons-nous pour définir vos objectifs de demain.',
+  });
 
   const subjectItems: SelectItem[] = [
     { label: 'Gestion Privée', value: 'gestion-privee' },
@@ -21,24 +17,51 @@
     { label: 'Autre', value: 'autre' },
   ];
 
-  const form = reactive<ContactForm>({
-    name: '',
-    email: '',
-    phone: '',
+  const initialState: Partial<ContactSchema> = {
+    name: undefined,
+    email: undefined,
+    phone: undefined,
     subject: 'gestion-privee',
-    message: '',
+    message: undefined,
     consent: false,
-  });
+  };
+
+  const state = reactive<Partial<ContactSchema>>({ ...initialState });
+
+  const isFormValid = computed(() => v.safeParse(contactSchema, state).success);
+
+  const toast = useToast();
+  const onSubmitPending = ref(false);
+  async function onSubmit(event: FormSubmitEvent<ContactSchema>) {
+    try {
+      onSubmitPending.value = true;
+      await $fetch('/api/contacts', {
+        method: 'POST',
+        body: event.data,
+      });
+      Object.assign(state, initialState);
+      toast.add({
+        title: 'Demande envoyée',
+        description: 'Merci, nous vous recontacterons dans les plus bref délais.',
+        color: 'success',
+        icon: 'i-lucide-check-circle',
+      });
+    } catch (error) {
+      console.error(error);
+      toast.add({
+        title: 'Envoi impossible',
+        description: "Une erreur est survenue lors de l'envoi. Merci de réessayer.",
+        color: 'error',
+        icon: 'i-lucide-alert-triangle',
+      });
+    } finally {
+      onSubmitPending.value = false;
+    }
+  }
 
   const heroReady = useHeroReady();
   const formVisible = useReveal(useTemplateRef('formRef'));
   const mapVisible = useReveal(useTemplateRef('mapRef'));
-
-  useSeoMeta({
-    title: 'Contact — AMS Patrimoine',
-    description:
-      'Un accompagnement sur mesure commence par une écoute attentive. Rencontrons-nous pour définir vos objectifs de demain.',
-  });
 </script>
 
 <template>
@@ -133,11 +156,11 @@
         style="transition-delay: 200ms"
         :class="formVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
       >
-        <UForm :state="form" class="space-y-10" @submit="() => {}">
+        <UForm :schema="contactSchema" :state class="space-y-10" @submit="onSubmit">
           <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
             <UFormField name="name" label="Nom Complet">
               <UInput
-                v-model="form.name"
+                v-model="state.name"
                 placeholder="Jean-Baptiste Lully"
                 variant="none"
                 class="border-sand-500/30 focus-within:border-gold-500 w-full border-b"
@@ -145,7 +168,7 @@
             </UFormField>
             <UFormField name="email" label="Email">
               <UInput
-                v-model="form.email"
+                v-model="state.email"
                 type="email"
                 placeholder="lully@patrimoine.fr"
                 variant="none"
@@ -157,7 +180,7 @@
           <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
             <UFormField name="phone" label="Téléphone">
               <UInput
-                v-model="form.phone"
+                v-model="state.phone"
                 type="tel"
                 placeholder="+33 0 00 00 00 00"
                 variant="none"
@@ -166,7 +189,7 @@
             </UFormField>
             <UFormField name="subject" label="Objet">
               <USelect
-                v-model="form.subject"
+                v-model="state.subject"
                 :items="subjectItems"
                 variant="none"
                 class="border-sand-500/30 focus-within:border-gold-500 w-full border-b"
@@ -176,7 +199,7 @@
 
           <UFormField name="message" label="Votre Message">
             <UTextarea
-              v-model="form.message"
+              v-model="state.message"
               :rows="4"
               placeholder="Décrivez brièvement votre situation..."
               variant="none"
@@ -185,13 +208,20 @@
           </UFormField>
 
           <UCheckbox
-            v-model="form.consent"
+            v-model="state.consent"
             label="J'accepte que les informations saisies soient utilisées pour permettre de me recontacter dans le cadre de ma demande."
+            :ui="{
+              base: 'ring-navy-500/40 data-[state=checked]:bg-navy-500 data-[state=checked]:ring-navy-500',
+            }"
           />
-
-          <div class="pt-6">
-            <UButton type="submit" label="Envoyer la demande" trailing-icon="i-lucide-arrow-right" size="xl" />
-          </div>
+          <UButton
+            type="submit"
+            label="Envoyer la demande"
+            trailing-icon="i-lucide-arrow-right"
+            size="xl"
+            :loading="onSubmitPending"
+            :disabled="!isFormValid || onSubmitPending"
+          />
         </UForm>
       </div>
     </section>
