@@ -21,7 +21,7 @@
     name: undefined,
     email: undefined,
     phone: undefined,
-    subject: ['gestion-privee'],
+    subject: [],
     message: undefined,
     consent: false,
   };
@@ -194,7 +194,11 @@
                 :items="subjectItems"
                 multiple
                 variant="none"
+                placeholder="Objet de votre demande"
                 class="border-sand-500/30 focus-within:border-gold-500 w-full border-b"
+                :ui="{
+                  placeholder: 'opacity-100 text-sand-500',
+                }"
               />
             </UFormField>
           </div>
