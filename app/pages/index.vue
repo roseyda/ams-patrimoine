@@ -77,7 +77,6 @@
   const ctaVisible = useReveal(useTemplateRef('ctaRef'));
 
   useSeoMeta({
-    title: 'AMS Patrimoine | Conseil en Gestion de Patrimoine',
     description:
       "AMS Patrimoine accompagne les familles et chefs d'entreprise dans la structuration, l'optimisation et la transmission de leur patrimoine avec une vision long terme.",
   });

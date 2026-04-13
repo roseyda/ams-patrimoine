@@ -38,7 +38,7 @@
   const ctaVisible = useReveal(useTemplateRef('ctaRef'));
 
   useSeoMeta({
-    title: 'Accompagnement Particuliers — AMS Patrimoine',
+    title: 'Accompagnement Particuliers',
     description:
       'Un accompagnement sur-mesure pour les familles exigeantes, alliant protection, pérennité et vision long-terme.',
   });

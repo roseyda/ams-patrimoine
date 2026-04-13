@@ -4,7 +4,7 @@
   import { contactSchema, type ContactSchema } from '~~/shared/schemas/contact';
 
   useSeoMeta({
-    title: 'Contact — AMS Patrimoine',
+    title: 'Contact',
     description:
       'Un accompagnement sur mesure commence par une écoute attentive. Rencontrons-nous pour définir vos objectifs de demain.',
   });

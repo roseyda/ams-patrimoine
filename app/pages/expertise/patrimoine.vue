@@ -56,7 +56,7 @@
   const ctaVisible = useReveal(useTemplateRef('ctaRef'));
 
   useSeoMeta({
-    title: 'Stratégie Patrimoniale — AMS Patrimoine',
+    title: 'Stratégie Patrimoniale',
     description:
       "Au-delà de la simple gestion, nous concevons des structures juridiques et fiscales pérennes, capables de traverser les générations avec la même solidité qu'un édifice de maître.",
   });

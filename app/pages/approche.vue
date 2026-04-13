@@ -84,7 +84,7 @@
   const signatureVisible = useReveal(useTemplateRef('signatureRef'));
 
   useSeoMeta({
-    title: "L'Approche — AMS Patrimoine",
+    title: "L'Approche",
     description:
       'Découvrez la méthodologie AMS Patrimoine : audit patrimonial, conception stratégique, édification et veille active. Une ingénierie de précision en quatre étapes.',
   });

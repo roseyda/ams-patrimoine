@@ -44,7 +44,7 @@
   const statsVisible = useReveal(useTemplateRef('statsRef'));
 
   useSeoMeta({
-    title: 'Le Cabinet — AMS Patrimoine',
+    title: 'Le Cabinet',
     description:
       "AMS Patrimoine incarne l'excellence du conseil indépendant, dédié à la pérennité et à l'optimisation de vos actifs les plus précieux.",
   });

@@ -58,7 +58,7 @@
   const quoteVisible = useReveal(useTemplateRef('quoteRef'));
 
   useSeoMeta({
-    title: 'Expertise — AMS Patrimoine',
+    title: 'Expertise',
     description:
       'Découvrez nos domaines de compétence : accompagnement dirigeants, particuliers, stratégie patrimoniale et financière. Une expertise multidimensionnelle au service de votre avenir.',
   });

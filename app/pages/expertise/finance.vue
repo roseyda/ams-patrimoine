@@ -16,7 +16,7 @@
   const ctaVisible = useReveal(useTemplateRef('ctaRef'));
 
   useSeoMeta({
-    title: 'Stratégie Financière — AMS Patrimoine',
+    title: 'Stratégie Financière',
     description:
       'Notre architecture ouverte garantit une neutralité absolue dans la sélection de vos actifs. Nous transformons la complexité des marchés en stratégies de croissance pérennes.',
   });

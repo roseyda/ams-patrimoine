@@ -16,7 +16,7 @@
   const ctaVisible = useReveal(useTemplateRef('ctaRef'));
 
   useSeoMeta({
-    title: 'Accompagnement Dirigeants — AMS Patrimoine',
+    title: 'Accompagnement Dirigeants',
     description:
       "La gestion du patrimoine d'un dirigeant exige une vision transversale, réconciliant enjeux professionnels et aspirations personnelles.",
   });
