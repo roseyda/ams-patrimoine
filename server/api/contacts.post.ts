@@ -25,7 +25,6 @@ export default defineEventHandler(async (event) => {
   if (!isAllowedOrigin(event)) {
     throw createError({
       statusCode: 403,
-      message: 'Origine non autorisée',
     });
   }
 
