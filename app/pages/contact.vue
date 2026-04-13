@@ -31,12 +31,11 @@
   const isFormValid = computed(() => v.safeParse(contactSchema, state).success);
 
   const toast = useToast();
-  const { $csrfFetch } = useNuxtApp();
   const onSubmitPending = ref(false);
   async function onSubmit(event: FormSubmitEvent<ContactSchema>) {
     try {
       onSubmitPending.value = true;
-      await $csrfFetch('/api/contacts', {
+      await $fetch('/api/contacts', {
         method: 'POST',
         body: event.data,
       });

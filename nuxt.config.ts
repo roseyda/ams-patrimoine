@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/ui', '@nuxt/image', '@nuxt/fonts', '@vueuse/nuxt', 'nuxt-csurf', '@nuxtjs/seo'],
+  modules: ['@nuxt/ui', '@nuxt/image', '@nuxt/fonts', '@vueuse/nuxt', '@nuxtjs/seo'],
   site: {
     url: process.env.NUXT_SITE_URL,
     name: process.env.NUXT_SITE_NAME,
@@ -48,15 +48,6 @@ export default defineNuxtConfig({
       include: ['valibot'],
     },
   },
-  csurf: {
-    methodsToProtect: ['POST', 'PUT', 'PATCH', 'DELETE'],
-    cookie: {
-      path: '/',
-      httpOnly: true,
-      sameSite: 'strict',
-      secure: true,
-    },
-  },
   colorMode: {
     preference: 'light',
     fallback: 'light',
@@ -66,7 +57,17 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
   routeRules: {
-    '/': { prerender: true },
+    '/**': { prerender: true },
+    '/api/**': { prerender: false },
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+      // TODO: repasser à `failOnError: true` une fois les pages manquantes
+      // (/mentions-legales, /confidentialite) ajoutées au site.
+      failOnError: false,
+    },
   },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
