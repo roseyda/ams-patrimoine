@@ -27,7 +27,7 @@
       <NuxtLink to="/">
         <NuxtPicture
           src="/images/logo/LOGO-noir-2-2048x910.png"
-          :img-attrs="{ class: 'h-[60px] w-auto' }"
+          :img-attrs="{ height: 60, class: 'h-[60px] w-auto' }"
           alt="AMS Patrimoine"
         />
       </NuxtLink>

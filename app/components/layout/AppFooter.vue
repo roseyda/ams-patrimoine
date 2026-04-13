@@ -37,7 +37,7 @@
           <div class="mb-6 flex items-center gap-2.5">
             <NuxtPicture
               src="/images/logo/LOGO-noir-2-2048x910.png"
-              :img-attrs="{ class: 'h-[60px] w-auto invert' }"
+              :img-attrs="{ height: 60, class: 'h-[60px] w-auto invert' }"
               alt="AMS Patrimoine"
             />
             <span class="font-serif text-lg leading-tight tracking-tight">
