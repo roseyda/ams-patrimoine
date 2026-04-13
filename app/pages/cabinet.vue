@@ -77,7 +77,7 @@
         <!-- Blade image -->
         <div
           class="relative col-span-12 transition-all duration-700 ease-out lg:col-span-5"
-          style="transition-delay: 400ms"
+          style="transition-delay: 300ms"
           :class="heroReady ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
         >
           <div class="h-150 w-full overflow-hidden rounded-sm shadow-2xl">
