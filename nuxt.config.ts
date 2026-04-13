@@ -2,11 +2,12 @@
 export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxt/image', '@nuxt/fonts', '@vueuse/nuxt', 'nuxt-csurf', '@nuxtjs/seo'],
   site: {
-    url: 'https://amspatrimoine.fr',
-    name: 'AMS Patrimoine',
+    url: process.env.NUXT_SITE_URL,
+    name: process.env.NUXT_SITE_NAME,
     description:
       'Cabinet de conseil en gestion de patrimoine et stratégie financière à Toulouse. Accompagnement sur-mesure pour dirigeants et particuliers.',
     defaultLocale: 'fr',
+    indexable: process.env.NUXT_PUBLIC_SITE_ENV === 'production',
   },
   sitemap: {
     exclude: ['/api/**'],

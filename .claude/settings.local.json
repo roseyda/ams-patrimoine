@@ -37,7 +37,8 @@
       "Bash(find app/pages -name '*.vue' -exec sed -i '' -e 's/text-black\\\\b/text-navy-500/g' -e s/border-black/border-navy-500/g '{}' +)",
       "Bash(find app/pages -name '*.vue' -exec perl -pi -e 's/text-black\\(?=[\\\\s\"\\\\/]\\)/text-navy-500/g; s/border-black\\(?=[\\\\s\"\\\\/]\\)/border-navy-500/g' {} +)",
       "Bash(echo \"---EXIT:$?---\")",
-      "Bash(pnpm add:*)"
+      "Bash(pnpm add:*)",
+      "Bash(ls:*)"
     ]
   }
 }
