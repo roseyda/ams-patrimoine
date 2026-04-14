@@ -10,7 +10,7 @@
 
 <template>
   <BaseFadeTransition>
-    <div v-if="isVisible">
+    <div v-show="isVisible" :key="isVisible">
       <UButton
         icon="i-lucide-arrow-up"
         size="xl"
