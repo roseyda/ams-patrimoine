@@ -6,4 +6,6 @@
   </UMain>
 
   <LayoutAppFooter />
+
+  <LayoutScrollToTop />
 </template>
