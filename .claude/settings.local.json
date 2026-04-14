@@ -39,7 +39,13 @@
       "Bash(echo \"---EXIT:$?---\")",
       "Bash(pnpm add:*)",
       "Bash(ls:*)",
-      "Bash(pnpm remove:*)"
+      "Bash(pnpm remove:*)",
+      "Bash(awk '{print $NF}')",
+      "Bash(wc -l /Users/drosey/code/ams-patrimoine/app/pages/*.vue /Users/drosey/code/ams-patrimoine/app/pages/expertise/*.vue)",
+      "Bash(find /Users/drosey/code/ams-patrimoine/app -type f \\\\\\( -name \"*.vue\" -o -name \"*.ts\" \\\\\\) -exec wc -l {} +)",
+      "Bash(xargs basename:*)",
+      "Bash(grep:*)",
+      "Bash(git check-ignore:*)"
     ]
   }
 }
