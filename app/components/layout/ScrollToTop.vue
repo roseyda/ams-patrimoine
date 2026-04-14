@@ -13,10 +13,9 @@
     <div v-if="isVisible">
       <UButton
         icon="i-lucide-arrow-up"
-        color="primary"
         size="xl"
         aria-label="Revenir en haut de page"
-        class="fixed right-10 bottom-10 z-50 rounded-full shadow-lg"
+        class="border-sand-400 fixed right-10 bottom-10 z-50 cursor-pointer rounded-full border shadow-xl"
         @click="scrollToTop"
       />
     </div>

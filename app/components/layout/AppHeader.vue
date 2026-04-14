@@ -46,15 +46,7 @@
     </template>
 
     <template #right>
-      <UButton
-        label="Prendre rendez-vous"
-        to="/contact"
-        size="sm"
-        class="hidden rounded-sm lg:inline-flex"
-        :ui="{
-          base: 'bg-gradient-to-r from-primary-500 to-navy-500 hover:from-navy-500 hover:to-primary-500 text-white border-0',
-        }"
-      />
+      <UButton label="Prendre rendez-vous" to="/contact" size="md" class="hidden lg:inline-flex" />
     </template>
 
     <!-- Mobile menu content -->
@@ -68,7 +60,7 @@
         }"
       />
       <div class="mt-6 px-3">
-        <UButton label="Prendre rendez-vous" to="/contact" block size="lg" class="rounded-sm" />
+        <UButton label="Prendre rendez-vous" to="/contact" block size="lg" />
       </div>
     </template>
   </UHeader>
